@@ -3,8 +3,8 @@
     align-items: center;
     width: 100%;
     height: 50px;
-    /*border-bottom: 2px solid black;*/
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
 }
 .navbar h2{
     margin: 0 0 0 100px;
