@@ -4,9 +4,9 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 function App() {
   const images = [
-    '../public/10.png',
-    '../public/20.png',
-    '../public/30.png',
+    '/10.png',
+    '/20.png',
+    '/30.png',
   ];
   return (
     <BrowserRouter>
