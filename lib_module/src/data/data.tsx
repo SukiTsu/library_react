@@ -144,18 +144,27 @@ export const RESUME_DATA = {
     molecules: {
       component1: {
         name: "Alert",
-        description: "",
-        presentation: "",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic examples",
+        },
       },
       component2: {
         name: "Breadcrumb",
-        description: "",
-        presentation: "",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic examples",
+        },
       },
       component3: {
         name: "Card",
-        description: "",
-        presentation: "",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic examples",
+        },
       },
     },
     organismes: {
