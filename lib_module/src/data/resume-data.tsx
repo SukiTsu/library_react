@@ -82,4 +82,11 @@ export const RESUME_DATA = {
       },
     ],
   },
+  content: {
+    atoms: {
+      component1: {
+        name: "Input",
+      },
+    },
+  },
 };
