@@ -1,22 +1,21 @@
 import './App.css';
-import Carousel from './components/organismes/Carousel';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+// Carousel
+import {images, interval, showcontrols} from './components/organismes/carousel/Carousel_data';
+import Carousel from './components/organismes/carousel/Carousel';
 
 function App() {
-  const images = [
-    '/10.png',
-    '/20.png',
-    '/30.png',
-  ];
+
   return (
     <BrowserRouter>
       <Routes>
+
         {/* Rediriger la racine vers /carousel */}
         <Route path="/" element={<Navigate to="/carousel" replace />} />
         
         {/* Route pour le carousel */}
-      <Route path='/carousel' element={<Carousel images={images}/>} />
-        
+        <Route path='/carousel' element={<Carousel images={images} interval={interval} showControls={showcontrols} />} />
+
       </Routes>
     </BrowserRouter>
   )

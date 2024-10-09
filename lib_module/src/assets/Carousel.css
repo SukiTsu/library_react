@@ -1,7 +1,7 @@
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 16rem; /* équivalent à h-64 dans Tailwind */
+    height: 16rem;
     overflow: hidden;
   }
   

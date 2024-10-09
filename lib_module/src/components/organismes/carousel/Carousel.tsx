@@ -1,7 +1,7 @@
 // lib_module/src/components/organismes/Carousel.tsx
 
 import React, { useState, useEffect } from 'react';
-import './Carousel.css';  
+import '../../../assets/Carousel.css';
 
 interface CarouselProps {
   images: string[];
@@ -46,8 +46,8 @@ const Carousel: React.FC<CarouselProps> = ({ images, interval = 3000, showContro
             className="carousel-image"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = '../public/10.png';
-              target.alt = 'Image not available';
+              target.src = '/10.png';
+              target.alt = 'Erreur sur le carousel';
             }}
           />
         ))}
