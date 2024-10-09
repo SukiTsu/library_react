@@ -18,3 +18,8 @@
 .sidebar ul li{
     margin-bottom: 10px;
 }
+
+.components-link{
+    text-decoration: none;
+    color: black;
+}

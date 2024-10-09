@@ -20,7 +20,10 @@ export default function Sidebar() {
             <ul>
               {Object.keys(category.components).map((componentKey) => (
                 <li key={componentKey}>
-                  <Link to={category.components[componentKey].path}>
+                  <Link
+                    to={category.components[componentKey].path}
+                    className="components-link"
+                  >
                     {category.components[componentKey].name}
                   </Link>
                 </li>
