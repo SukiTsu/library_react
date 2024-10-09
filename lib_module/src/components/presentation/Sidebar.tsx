@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import "../../assets/css/sidebar.css";
 import { RESUME_DATA } from "../../data/resume-data";
 
-type Components = Record<string, { name: string }>;
+type Components = Record<string, { name: string; path: string }>;
 type Category = { name: string; components: Components };
 
 export default function Sidebar() {
@@ -18,11 +19,11 @@ export default function Sidebar() {
             <h3>{category.name}</h3>
             <ul>
               {Object.keys(category.components).map((componentKey) => (
-                <a href="">
-                  <li key={componentKey}>
+                <li key={componentKey}>
+                  <Link to={category.components[componentKey].path}>
                     {category.components[componentKey].name}
-                  </li>
-                </a>
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>

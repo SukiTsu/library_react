@@ -5,22 +5,32 @@ export const RESUME_DATA = {
         name: "Atoms",
         components: {
           component1: {
-            name: "Checkbox",
+            name: "Input",
+            path: "/atoms/input",
           },
           component2: {
-            name: "Select",
+            name: "Checkbox",
+            path: "/atoms/checkbox",
           },
           component3: {
-            name: "Radio",
+            name: "Select",
+            path: "/atoms/checkbox",
           },
           component4: {
-            name: "Toggle",
+            name: "Radio",
+            path: "/atoms/checkbox",
           },
           component5: {
-            name: "Button",
+            name: "Toggle",
+            path: "/atoms/checkbox",
           },
           component6: {
+            name: "Button",
+            path: "/atoms/checkbox",
+          },
+          component7: {
             name: "Loader",
+            path: "/atoms/checkbox",
           },
         },
       },
@@ -31,12 +41,15 @@ export const RESUME_DATA = {
         components: {
           component1: {
             name: "Alert",
+            path: "/molecules/alert",
           },
           component2: {
             name: "Breadcrumb",
+            path: "/molecules/breadcrumb",
           },
           component3: {
             name: "Card",
+            path: "/molecules/card",
           },
         },
       },
@@ -47,21 +60,23 @@ export const RESUME_DATA = {
         components: {
           component1: {
             name: "Accordéon",
+            path: "/organismes/accordeon",
           },
           component2: {
-            name: "Accordéon",
+            name: "Carousel",
+            path: "/organismes/carousel",
           },
           component3: {
-            name: "Carousel",
+            name: "Modal",
+            path: "/organismes/modal",
           },
           component4: {
-            name: "Modal",
+            name: "Tabs",
+            path: "/organismes/tabs",
           },
           component5: {
-            name: "Tabs",
-          },
-          component6: {
             name: "Tableau",
+            path: "/organismes/tableau",
           },
         },
       },
