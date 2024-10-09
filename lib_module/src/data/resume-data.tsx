@@ -86,6 +86,11 @@ export const RESUME_DATA = {
     atoms: {
       component1: {
         name: "Input",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic exemples",
+        },
       },
     },
   },
