@@ -2,53 +2,68 @@ export const RESUME_DATA = {
   sidebar: {
     atoms: [
       {
-        name: "Input",
-      },
-      {
-        name: "Checkbox",
-      },
-      {
-        name: "Select",
-      },
-      {
-        name: "Radio",
-      },
-      {
-        name: "Toggle",
-      },
-      {
-        name: "Button",
-      },
-      {
-        name: "Loader",
+        name: "Atoms",
+        components: {
+          component1: {
+            name: "Checkbox",
+          },
+          component2: {
+            name: "Select",
+          },
+          component3: {
+            name: "Radio",
+          },
+          component4: {
+            name: "Toggle",
+          },
+          component5: {
+            name: "Button",
+          },
+          component6: {
+            name: "Loader",
+          },
+        },
       },
     ],
     molecules: [
       {
-        name: "Alert",
-      },
-      {
-        name: "Breadcrumb",
-      },
-      {
-        name: "Card",
+        name: "Molecules",
+        components: {
+          component1: {
+            name: "Alert",
+          },
+          component2: {
+            name: "Breadcrumb",
+          },
+          component3: {
+            name: "Card",
+          },
+        },
       },
     ],
     organismes: [
       {
-        name: "Accordéon",
-      },
-      {
-        name: "Carousel",
-      },
-      {
-        name: "Modal",
-      },
-      {
-        name: "Tabs",
-      },
-      {
-        name: "Tableau",
+        name: "Organismes",
+        components: {
+          component1: {
+            name: "Accordéon",
+          },
+          component2: {
+            name: "Accordéon",
+          },
+          component3: {
+            name: "Carousel",
+          },
+          component4: {
+            name: "Modal",
+          },
+          component5: {
+            name: "Tabs",
+          },
+          component6: {
+            name: "Tableau",
+          },
+        },
       },
     ],
   },
