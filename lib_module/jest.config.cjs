@@ -1,10 +1,10 @@
 module.exports = {
-  preset: 'ts-jest', // Ajoutez cette ligne pour utiliser ts-jest
-  testEnvironment: 'jsdom', // Nécessaire pour les tests React
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
   moduleNameMapper: {
-    '\\.(css|less)$': 'identity-obj-proxy', // Pour traiter les fichiers CSS
+    '\\.(css|less)$': 'identity-obj-proxy', // Corriger l'expression régulière ici
   },
   transform: {
-    '^.+\\.tsx?$': 'ts-jest', // Utilisez ts-jest pour les fichiers TypeScript
+    '^.+\\.tsx?$': 'ts-jest',
   },
 };
