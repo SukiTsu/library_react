@@ -1,5 +1,5 @@
 import "../../../../assets/css/pages/input.css";
-import { RESUME_DATA } from "../../../../data/resume-data";
+import { RESUME_DATA } from "../../../../data/data";
 
 import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";

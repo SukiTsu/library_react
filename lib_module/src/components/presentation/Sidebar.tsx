@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../../assets/css/sidebar.css";
-import { RESUME_DATA } from "../../data/resume-data";
+import { RESUME_DATA } from "../../data/data";
 
 type Components = Record<string, { name: string; path: string }>;
 type Category = { name: string; components: Components };
