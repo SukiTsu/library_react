@@ -5,8 +5,11 @@
     display: flex;
     flex-direction: column;
 }
+.sidebar h2{
+    text-align: center;
+}
 .components-category{
-    margin-left: 30px;
+    margin-left: 50px;
 }
 .sidebar ul{
     list-style-type: none;
