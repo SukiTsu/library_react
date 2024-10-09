@@ -14,23 +14,23 @@ export const RESUME_DATA = {
           },
           component3: {
             name: "Select",
-            path: "/atoms/checkbox",
+            path: "/atoms/select",
           },
           component4: {
             name: "Radio",
-            path: "/atoms/checkbox",
+            path: "/atoms/radio",
           },
           component5: {
             name: "Toggle",
-            path: "/atoms/checkbox",
+            path: "/atoms/toggle",
           },
           component6: {
             name: "Button",
-            path: "/atoms/checkbox",
+            path: "/atoms/button",
           },
           component7: {
             name: "Loader",
-            path: "/atoms/checkbox",
+            path: "/atoms/loader",
           },
         },
       },
@@ -89,38 +89,56 @@ export const RESUME_DATA = {
         description:
           "Easily create inputs with different statuses and sizes using our components.",
         presentation: {
-          title: "Basic exemples",
+          title: "Basic examples",
         },
       },
       component2: {
         name: "Checkbox",
-        description: "",
-        presentation: "",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic examples",
+        },
       },
       component3: {
         name: "Select",
-        description: "",
-        presentation: "",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic examples",
+        },
       },
       component4: {
         name: "Radio",
-        description: "",
-        presentation: "",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic examples",
+        },
       },
       component5: {
         name: "Toggle",
-        description: "",
-        presentation: "",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic examples",
+        },
       },
       component6: {
         name: "Button",
-        description: "",
-        presentation: "",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic examples",
+        },
       },
       component7: {
         name: "Loader",
-        description: "",
-        presentation: "",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic examples",
+        },
       },
     },
     molecules: {
