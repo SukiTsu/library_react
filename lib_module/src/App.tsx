@@ -1,3 +1,7 @@
+import "prismjs/themes/prism-tomorrow.css"; // Thème sombre
+import "prismjs/plugins/line-numbers/prism-line-numbers.css"; // Numéros de ligne
+import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"; // Plugin de copier-coller
+
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
