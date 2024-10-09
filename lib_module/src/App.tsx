@@ -1,17 +1,20 @@
-import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+// src/App.tsx
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import InputForm from './components/atoms/input/InputForm.tsx';
+import './App.css';
 
-
-function App() {
+const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-      <Route path='/counter' element={<MonComposant/>} />
-        
+    <Router>
+      <div className="App">
+        <Routes>
+          {/* Route pour le formulaire d'entrée */}
+          <Route path="/input" element={<InputForm />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+};
 
-      </Routes>
-    </BrowserRouter>
-  )
-}
-
-export default App
+export default App;
