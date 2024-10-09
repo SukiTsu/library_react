@@ -92,6 +92,80 @@ export const RESUME_DATA = {
           title: "Basic exemples",
         },
       },
+      component2: {
+        name: "Checkbox",
+        description: "",
+        presentation: "",
+      },
+      component3: {
+        name: "Select",
+        description: "",
+        presentation: "",
+      },
+      component4: {
+        name: "Radio",
+        description: "",
+        presentation: "",
+      },
+      component5: {
+        name: "Toggle",
+        description: "",
+        presentation: "",
+      },
+      component6: {
+        name: "Button",
+        description: "",
+        presentation: "",
+      },
+      component7: {
+        name: "Loader",
+        description: "",
+        presentation: "",
+      },
+    },
+    molecules: {
+      component1: {
+        name: "Alert",
+        description: "",
+        presentation: "",
+      },
+      component2: {
+        name: "Breadcrumb",
+        description: "",
+        presentation: "",
+      },
+      component3: {
+        name: "Card",
+        description: "",
+        presentation: "",
+      },
+    },
+    organismes: {
+      component1: {
+        name: "Accordéon",
+        description: "",
+        presentation: "",
+      },
+      component2: {
+        name: "Carousel",
+        description: "",
+        presentation: "",
+      },
+      component3: {
+        name: "Modal",
+        description: "",
+        presentation: "",
+      },
+      component4: {
+        name: "Tabs",
+        description: "",
+        presentation: "",
+      },
+      component5: {
+        name: "Tableau",
+        description: "",
+        presentation: "",
+      },
     },
   },
 };
