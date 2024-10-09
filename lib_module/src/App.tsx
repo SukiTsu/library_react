@@ -1,16 +1,20 @@
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import AccordionPage from './components/AccordionPage.tsx'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Accordion from './components/organismes/accordion/Accordion';
+import accordionConfig from './components/organismes/accordion/accordionConfig';
+import './App.css'
 
-function App() {
+
+const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/counter' element={<div>Counter component here</div>} />
-        <Route path='/accordeon' element={<AccordionPage />} />
-      </Routes>
-    </BrowserRouter>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/accordion" element={<Accordion {...accordionConfig} />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
