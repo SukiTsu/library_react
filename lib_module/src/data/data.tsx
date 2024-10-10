@@ -115,6 +115,23 @@ export const RESUME_DATA = {
           "Easily create inputs with different statuses and sizes using our components.",
         presentation: {
           title: "Basic examples",
+          description: "description",
+          props: {
+            title: "How it works",
+            description: "description",
+            props1: {
+              title: "propsInput1",
+              description: "description du props 1",
+            },
+            props2: {
+              title: "propsInput2",
+              description: "description du props 2",
+            },
+            props3: {
+              title: "propsInput3",
+              description: "description du props 3",
+            },
+          },
         },
       },
       component3: {
