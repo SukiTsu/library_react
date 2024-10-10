@@ -170,28 +170,43 @@ export const RESUME_DATA = {
     organismes: {
       component1: {
         name: "Accordéon",
-        description: "",
-        presentation: "",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic examples",
+        },
       },
       component2: {
         name: "Carousel",
-        description: "",
-        presentation: "",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic examples",
+        },
       },
       component3: {
         name: "Modal",
-        description: "",
-        presentation: "",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic examples",
+        },
       },
       component4: {
         name: "Tabs",
-        description: "",
-        presentation: "",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic examples",
+        },
       },
       component5: {
         name: "Tableau",
-        description: "",
-        presentation: "",
+        description:
+          "Easily create inputs with different statuses and sizes using our components.",
+        presentation: {
+          title: "Basic examples",
+        },
       },
     },
   },
