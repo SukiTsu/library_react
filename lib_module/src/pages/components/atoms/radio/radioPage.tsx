@@ -35,6 +35,9 @@ export default function RadioPage() {
           </div>
           <div className="body-input-text">
             <h2>{RESUME_DATA.content.atoms.component4.presentation.title}</h2>
+            <p>
+              {RESUME_DATA.content.atoms.component4.presentation.description}
+            </p>
             <div className="example-component"></div>
             <pre>
               <code

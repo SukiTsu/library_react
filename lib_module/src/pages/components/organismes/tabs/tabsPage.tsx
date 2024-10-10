@@ -37,6 +37,12 @@ export default function TabsPage() {
             <h2>
               {RESUME_DATA.content.organismes.component4.presentation.title}
             </h2>
+            <p>
+              {
+                RESUME_DATA.content.organismes.component4.presentation
+                  .description
+              }
+            </p>
             <div className="example-component"></div>
             <pre>
               <code

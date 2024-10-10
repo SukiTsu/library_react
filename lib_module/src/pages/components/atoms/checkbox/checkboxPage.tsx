@@ -35,6 +35,9 @@ export default function CheckboxPage() {
           </div>
           <div className="body-input-text">
             <h2>{RESUME_DATA.content.atoms.component2.presentation.title}</h2>
+            <p>
+              {RESUME_DATA.content.atoms.component2.presentation.description}
+            </p>
             <div className="example-component"></div>
             <pre>
               <code

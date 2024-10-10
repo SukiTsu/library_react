@@ -37,6 +37,12 @@ export default function BreadcrumbPage() {
             <h2>
               {RESUME_DATA.content.molecules.component2.presentation.title}
             </h2>
+            <p>
+              {
+                RESUME_DATA.content.molecules.component2.presentation
+                  .description
+              }
+            </p>
             <div className="example-component"></div>
             <pre>
               <code

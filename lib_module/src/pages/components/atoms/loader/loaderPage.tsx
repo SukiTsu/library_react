@@ -35,6 +35,9 @@ export default function LoaderPage() {
           </div>
           <div className="body-input-text">
             <h2>{RESUME_DATA.content.atoms.component7.presentation.title}</h2>
+            <p>
+              {RESUME_DATA.content.atoms.component7.presentation.description}
+            </p>
             <div className="example-component"></div>
             <pre>
               <code

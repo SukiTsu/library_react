@@ -37,6 +37,12 @@ export default function ModalPage() {
             <h2>
               {RESUME_DATA.content.organismes.component3.presentation.title}
             </h2>
+            <p>
+              {
+                RESUME_DATA.content.organismes.component3.presentation
+                  .description
+              }
+            </p>
             <div className="example-component"></div>
             <pre>
               <code

@@ -37,6 +37,12 @@ export default function AccordeonPage() {
             <h2>
               {RESUME_DATA.content.organismes.component1.presentation.title}
             </h2>
+            <p>
+              {
+                RESUME_DATA.content.organismes.component1.presentation
+                  .description
+              }
+            </p>
             <div className="example-component"></div>
             <pre>
               <code

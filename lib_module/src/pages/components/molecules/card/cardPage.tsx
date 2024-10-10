@@ -37,6 +37,12 @@ export default function CardPage() {
             <h2>
               {RESUME_DATA.content.molecules.component3.presentation.title}
             </h2>
+            <p>
+              {
+                RESUME_DATA.content.molecules.component3.presentation
+                  .description
+              }
+            </p>
             <div className="example-component"></div>
             <pre>
               <code
