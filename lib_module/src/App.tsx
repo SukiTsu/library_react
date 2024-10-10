@@ -5,47 +5,46 @@ import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"; // Pl
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
+import InputPage from "./pages/components/atoms/input/inputPage";
+import CheckboxPage from "./pages/components/atoms/checkbox/checkboxPage";
+import SelectPage from "./pages/components/atoms/select/selectPage";
+import RadioPage from "./pages/components/atoms/radio/radioPage";
+import TogglePage from "./pages/components/atoms/toggle/togglePage";
+import ButtonPage from "./pages/components/atoms/button/buttonPage";
+import LoaderPage from "./pages/components/atoms/loader/loaderPage";
 
-import Input from "./pages/components/atoms/input/input";
-import Checkbox from "./pages/components/atoms/checkbox/checkbox";
-import Select from "./pages/components/atoms/select/select";
-import Radio from "./pages/components/atoms/radio/radio";
-import Toggle from "./pages/components/atoms/toggle/toggle";
-import Button from "./pages/components/atoms/button/button";
-import Loader from "./pages/components/atoms/loader/loader";
+import AlertPage from "./pages/components/molecules/alert/alertPage";
+import BreadcrumbPage from "./pages/components/molecules/breadcrumb/breadcrumbPage";
+import CardPage from "./pages/components/molecules/card/cardPage";
 
-import Alert from "./pages/components/molecules/alert/alert";
-import Breadcrumb from "./pages/components/molecules/breadcrumb/breadcrumb";
-import Card from "./pages/components/molecules/card/card";
-
-import Accordeon from "./pages/components/organismes/accordeon/accordeon";
-import Carousel from "./pages/components/organismes/carousel/carousel";
-import Modal from "./pages/components/organismes/modal/modal";
-import Tabs from "./pages/components/organismes/tabs/tabs";
-import Tableau from "./pages/components/organismes/tableau/tableau";
+import AccordeonPage from "./pages/components/organismes/accordeon/accordeonPage";
+import CarouselPage from "./pages/components/organismes/carousel/carouselPage";
+import ModalPage from "./pages/components/organismes/modal/modalPage";
+import TabsPage from "./pages/components/organismes/tabs/tabsPage";
+import TableauPage from "./pages/components/organismes/tableau/tableauPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/atoms/input" element={<Input />} />
-        <Route path="/atoms/checkbox" element={<Checkbox />} />
-        <Route path="/atoms/select" element={<Select />} />
-        <Route path="/atoms/radio" element={<Radio />} />
-        <Route path="/atoms/toggle" element={<Toggle />} />
-        <Route path="/atoms/button" element={<Button />} />
-        <Route path="/atoms/loader" element={<Loader />} />
+        <Route path="/atoms/input" element={<InputPage />} />
+        <Route path="/atoms/checkbox" element={<CheckboxPage />} />
+        <Route path="/atoms/select" element={<SelectPage />} />
+        <Route path="/atoms/radio" element={<RadioPage />} />
+        <Route path="/atoms/toggle" element={<TogglePage />} />
+        <Route path="/atoms/button" element={<ButtonPage />} />
+        <Route path="/atoms/loader" element={<LoaderPage />} />
 
-        <Route path="/molecules/alert" element={<Alert />} />
-        <Route path="/molecules/breadcrumb" element={<Breadcrumb />} />
-        <Route path="/molecules/card" element={<Card />} />
+        <Route path="/molecules/alert" element={<AlertPage />} />
+        <Route path="/molecules/breadcrumb" element={<BreadcrumbPage />} />
+        <Route path="/molecules/card" element={<CardPage />} />
 
-        <Route path="/organismes/accordeon" element={<Accordeon />} />
-        <Route path="/organismes/carousel" element={<Carousel />} />
-        <Route path="/organismes/modal" element={<Modal />} />
-        <Route path="/organismes/tabs" element={<Tabs />} />
-        <Route path="/organismes/tableau" element={<Tableau />} />
+        <Route path="/organismes/accordeon" element={<AccordeonPage />} />
+        <Route path="/organismes/carousel" element={<CarouselPage />} />
+        <Route path="/organismes/modal" element={<ModalPage />} />
+        <Route path="/organismes/tabs" element={<TabsPage />} />
+        <Route path="/organismes/tableau" element={<TableauPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -6,7 +6,7 @@ import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
 import { useEffect } from "react";
 
-export default function Toggle() {
+export default function TogglePage() {
   useEffect(() => {
     Prism.highlightAll();
   }, []);

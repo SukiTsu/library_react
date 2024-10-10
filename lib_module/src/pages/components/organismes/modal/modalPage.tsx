@@ -1,4 +1,4 @@
-import "../../../../assets/css/pages/input.css";
+import "../../../../assets/css/pages/select.css";
 import { RESUME_DATA } from "../../../../data/data";
 
 import Navbar from "../../../../components/presentation/Navbar";
@@ -6,7 +6,7 @@ import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
 import { useEffect } from "react";
 
-export default function Input() {
+export default function ModalPage() {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
@@ -25,11 +25,13 @@ export default function Input() {
         <Sidebar />
         <div className="body-input-presentation">
           <div className="body-input-header">
-            <h1>{RESUME_DATA.content.atoms.component1.name}</h1>
-            <h3>{RESUME_DATA.content.atoms.component1.description}</h3>
+            <h1>{RESUME_DATA.content.organismes.component3.name}</h1>
+            <h3>{RESUME_DATA.content.organismes.component3.description}</h3>
           </div>
           <div className="body-input-text">
-            <h2>{RESUME_DATA.content.atoms.component1.presentation.title}</h2>
+            <h2>
+              {RESUME_DATA.content.organismes.component3.presentation.title}
+            </h2>
             <div className="example-component"></div>
             <pre>
               <code

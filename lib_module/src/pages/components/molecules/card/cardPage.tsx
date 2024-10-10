@@ -6,7 +6,7 @@ import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
 import { useEffect } from "react";
 
-export default function Tableau() {
+export default function CardPage() {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
@@ -25,12 +25,12 @@ export default function Tableau() {
         <Sidebar />
         <div className="body-input-presentation">
           <div className="body-input-header">
-            <h1>{RESUME_DATA.content.organismes.component5.name}</h1>
-            <h3>{RESUME_DATA.content.organismes.component5.description}</h3>
+            <h1>{RESUME_DATA.content.molecules.component3.name}</h1>
+            <h3>{RESUME_DATA.content.molecules.component3.description}</h3>
           </div>
           <div className="body-input-text">
             <h2>
-              {RESUME_DATA.content.organismes.component5.presentation.title}
+              {RESUME_DATA.content.molecules.component3.presentation.title}
             </h2>
             <div className="example-component"></div>
             <pre>

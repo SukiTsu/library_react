@@ -6,7 +6,7 @@ import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
 import { useEffect } from "react";
 
-export default function Tabs() {
+export default function CarouselPage() {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
@@ -25,12 +25,12 @@ export default function Tabs() {
         <Sidebar />
         <div className="body-input-presentation">
           <div className="body-input-header">
-            <h1>{RESUME_DATA.content.organismes.component4.name}</h1>
-            <h3>{RESUME_DATA.content.organismes.component4.description}</h3>
+            <h1>{RESUME_DATA.content.organismes.component2.name}</h1>
+            <h3>{RESUME_DATA.content.organismes.component2.description}</h3>
           </div>
           <div className="body-input-text">
             <h2>
-              {RESUME_DATA.content.organismes.component4.presentation.title}
+              {RESUME_DATA.content.organismes.component2.presentation.title}
             </h2>
             <div className="example-component"></div>
             <pre>

@@ -6,7 +6,7 @@ import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
 import { useEffect } from "react";
 
-export default function Select() {
+export default function ButtonPage() {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
@@ -25,11 +25,11 @@ export default function Select() {
         <Sidebar />
         <div className="body-input-presentation">
           <div className="body-input-header">
-            <h1>{RESUME_DATA.content.atoms.component3.name}</h1>
-            <h3>{RESUME_DATA.content.atoms.component3.description}</h3>
+            <h1>{RESUME_DATA.content.atoms.component6.name}</h1>
+            <h3>{RESUME_DATA.content.atoms.component6.description}</h3>
           </div>
           <div className="body-input-text">
-            <h2>{RESUME_DATA.content.atoms.component3.presentation.title}</h2>
+            <h2>{RESUME_DATA.content.atoms.component6.presentation.title}</h2>
             <div className="example-component"></div>
             <pre>
               <code
