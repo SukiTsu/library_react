@@ -1,6 +1,6 @@
-import "prismjs/themes/prism-tomorrow.css"; // Thème sombre
-import "prismjs/plugins/line-numbers/prism-line-numbers.css"; // Numéros de ligne
-import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"; // Plugin de copier-coller
+import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/plugins/line-numbers/prism-line-numbers.css";
+import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js";
 
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -24,6 +24,7 @@ import TabsPage from "./pages/components/organismes/tabs/tabsPage";
 import TableauPage from "./pages/components/organismes/tableau/tableauPage";
 
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>
