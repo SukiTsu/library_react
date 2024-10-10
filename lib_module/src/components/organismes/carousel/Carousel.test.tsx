@@ -10,7 +10,6 @@ test('Carousel contient des images spécifiques', () => {
   render(<Carousel images={images} />);
 
   const carousel = screen.getByTestId('carousel');
-  console.log(carousel);
   const item = screen.getByAltText('Carousel image 1');
 
   expect(carousel).toContainElement(item);
