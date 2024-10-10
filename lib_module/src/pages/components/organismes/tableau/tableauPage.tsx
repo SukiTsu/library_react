@@ -7,9 +7,11 @@ import Prism from "prismjs";
 import { useEffect } from "react";
 
 export default function TableauPage() {
+  //Hook useEffect pour exécuter une action après le montage du composant
   useEffect(() => {
+    // Appelle Prism.highlightAll() pour appliquer la coloration syntaxique au contenu de la page après le rendu
     Prism.highlightAll();
-  }, []);
+  }, []); // Le tableau de dépendances vide assure que cette fonction s'exécute seulement une fois après le premier rendu.
 
   const htmlSnippet = `
     &lt;div className="body-input-header"&gt;<br/>
@@ -18,6 +20,7 @@ export default function TableauPage() {
     &lt;/div&gt;
   `;
 
+  // Récupération des données depuis le fichier data
   const props = RESUME_DATA.content.atoms.component1.presentation.props;
 
   return (
@@ -46,6 +49,7 @@ export default function TableauPage() {
               <h2>{props.title}</h2>
               <p>{props.description}</p>
               <ul className="props-list">
+                {/* Boucle sur chaque prop du fichier data pour afficher son titre et sa description. */}
                 {Object.entries(props).map(([key, propData]) => {
                   if (typeof propData === "object") {
                     return (
