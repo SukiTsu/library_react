@@ -4,6 +4,7 @@ import { RESUME_DATA } from "../../../../data/data";
 import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
+import InputForm from "../../../../components/atoms/input/InputForm";
 
 export default function InputPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -34,7 +35,9 @@ export default function InputPage() {
             <p>
               {RESUME_DATA.content.atoms.component1.presentation.description}
             </p>
-            <div className="example-component"></div>
+            <div className="example-component">
+            <InputForm />
+            </div>
             <pre>
               <code
                 className="language-html line-numbers"

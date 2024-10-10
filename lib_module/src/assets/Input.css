@@ -1,7 +1,6 @@
 /* src/assets/Input.css */
 .form-container {
-  max-width: 500px;  
-  margin: 20px auto; 
+  max-width: 400px;  
   padding: 20px;     
   border: 1px solid #ccc; 
   border-radius: 8px; 

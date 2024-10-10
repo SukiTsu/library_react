@@ -18,7 +18,6 @@ const InputForm: React.FC = () => {
 
     return (
         <div className="form-container">
-            <h2 className="form-title">Formulaire</h2>
             <form onSubmit={handleSubmit}>
                 {inputConfig.map((inputProps, index) => (
                     <div className="input-group" key={index}>

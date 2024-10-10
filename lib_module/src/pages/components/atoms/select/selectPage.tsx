@@ -5,6 +5,8 @@ import { RESUME_DATA } from "../../../../data/data";
 import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
+import Select from "../../../../components/atoms/select/Select";
+import { selectConfig } from "../../../../components/atoms/select/SelectConfig";
 
 export default function SelectPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -38,7 +40,9 @@ export default function SelectPage() {
             <p>
               {RESUME_DATA.content.atoms.component3.presentation.description}
             </p>
-            <div className="example-component"></div>
+            <div className="example-component">
+            <Select {...selectConfig} />
+            </div>
             <pre>
               <code
                 className="language-html line-numbers"

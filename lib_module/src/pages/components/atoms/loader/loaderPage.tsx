@@ -5,6 +5,8 @@ import { RESUME_DATA } from "../../../../data/data";
 import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
+import Loader from "../../../../components/atoms/loaders/Loader";
+import { loaderConfig } from "../../../../components/atoms/loaders/LoaderConfig";
 
 export default function LoaderPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -38,7 +40,9 @@ export default function LoaderPage() {
             <p>
               {RESUME_DATA.content.atoms.component7.presentation.description}
             </p>
-            <div className="example-component"></div>
+            <div className="example-component">
+            <Loader {...loaderConfig} />
+            </div>
             <pre>
               <code
                 className="language-html line-numbers"
