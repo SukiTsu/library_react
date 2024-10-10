@@ -2,12 +2,16 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    position: relative;
 }
 .body-input-presentation{
     display: flex;
     flex-direction: column;
-    margin: 40px 0 0 40px;
+    /*margin: 40px 0 0 40px;*/
     width: 75%;
+    position: relative;
+    margin-left: 250px; /* Espace pour la largeur de la sidebar */
+    padding-top: 50px; /* Espace pour la hauteur de la navbar */
 }
 .body-input-text{
     margin-top: 50px;

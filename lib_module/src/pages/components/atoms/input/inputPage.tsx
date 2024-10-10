@@ -52,7 +52,6 @@ export default function InputPage() {
                       </li>
                     );
                   }
-                  return null; // Ignore non-object entries like "title" or "description"
                 })}
               </ul>
             </div>
