@@ -1,7 +1,13 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "es5",                              // ou une version plus récente
+    "module": "commonjs",                        // Utiliser commonjs pour Jest
+    "jsx": "react",                              // Assurez-vous que JSX est activé
+    "esModuleInterop": true,                     // Nécessaire pour importer React
+    "strict": true,                              // Active les vérifications strictes
+    "skipLibCheck": true,                        // Pour ignorer les vérifications des fichiers de déclaration
+    "forceConsistentCasingInFileNames": true    // Pour forcer la cohérence des noms de fichiers
+  },
+  "include": ["src/**/*"],                       // Inclut tous les fichiers source
+  "exclude": ["node_modules", "**/*.spec.ts"]   // Exclut les fichiers de test
 }
