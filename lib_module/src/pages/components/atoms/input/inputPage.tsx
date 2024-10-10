@@ -11,10 +11,7 @@ export default function InputPage() {
   }, []);
 
   const htmlSnippet = `
-    &lt;div className="body-input-header"&gt;<br/>
-    &nbsp;&nbsp;&lt;h1&gt;&#123;RESUME_DATA.content.atoms.component1.name&#125;&lt;/h1&gt;<br/>
-    &nbsp;&nbsp;&lt;h3&gt;&#123;RESUME_DATA.content.atoms.component1.description&#125;&lt;/h3&gt;<br/>
-    &lt;/div&gt;
+    &lt;Input propsInput1="prop1" propsInput2="prop2" propsInput3="prop3"/>;
   `;
 
   const props = RESUME_DATA.content.atoms.component1.presentation.props;
