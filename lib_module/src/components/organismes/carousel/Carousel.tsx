@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import '../../../assets/Carousel.css';
+import '@testing-library/jest-dom';
 
 interface CarouselProps {
   images: string[];
@@ -34,7 +35,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, interval = 3000, showContro
 
   return (
     <div className="carousel-container">
-      <div 
+      <div data-testid="carousel"
         className="carousel-slide" 
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
