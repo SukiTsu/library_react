@@ -6,6 +6,9 @@ import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
 
+import { DEFAULT_TABLE_CONFIG } from "../../../../components/organismes/tableau/Tableau_data";
+import Tableau from "../../../../components/organismes/tableau/Tableau";
+
 export default function TableauPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
   useEffect(() => {
@@ -22,6 +25,46 @@ export default function TableauPage() {
 
   // Récupération des données depuis le fichier data
   const props = RESUME_DATA.content.atoms.component1.presentation.props;
+
+  //config du tableau
+  const data = [
+    { id: 1, name: "Alice", age: 25, country: "USA" },
+    { id: 2, name: "Bob", age: 30, country: "UK" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+    { id: 3, name: "Fabien", age: 25, country: "FR" },
+  ];
+
+  const columns = [
+    { field: "name", label: "Name" },
+    { field: "age", label: "Age" },
+    { field: "country", label: "Country" },
+  ];
+
+  const customConfig = {
+    ...DEFAULT_TABLE_CONFIG,
+    pagination: {
+      rowsPerPage: 10,
+      showPagination: true,
+    },
+    sortable: true,
+    onRowSelect: (selectedRows: any[]) => {
+      console.log("Selected Rows:", selectedRows); // Afficher les lignes sélectionnées
+    },
+  };
 
   return (
     <div>
@@ -43,6 +86,7 @@ export default function TableauPage() {
                   .description
               }
             </p>
+            <Tableau data={data} columns={columns} config={customConfig} />
             <div className="example-component"></div>
             <pre>
               <code
