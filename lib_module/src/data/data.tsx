@@ -375,24 +375,29 @@ export const RESUME_DATA = {
       component2: {
         name: "Carousel",
         description:
-          "Easily create inputs with different statuses and sizes using our components.",
+          "A component used to scroll through a set of elements (often images, maps or slides) interactively. The Carousel can include features such as navigation buttons, automatic transitions and more.",
         presentation: {
-          title: "Basic examples",
-          description: "description",
+          title: "Example",
+          description:
+            "Here's a quick example of an Carousel component to import into your project :",
           props: {
             title: "How it works",
-            description: "description",
+            description:
+              "Here are the props you can modify to customise your Carousel component :",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
+              title: "images",
+              description:
+                "Choose the images you want to appear in your carousel.",
             },
             props2: {
-              title: "propsInput2",
-              description: "description du props 2",
+              title: "interval",
+              description:
+                "Choose the length of the interval between images (for example : interval={20} for 20s).",
             },
             props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "showControls",
+              description:
+                "Choose whether or not you want to display the carousel control buttons.",
             },
           },
         },
