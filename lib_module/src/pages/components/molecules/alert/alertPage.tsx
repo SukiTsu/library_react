@@ -14,14 +14,11 @@ export default function AlertPage() {
   }, []); // Le tableau de dépendances vide assure que cette fonction s'exécute seulement une fois après le premier rendu.
 
   const htmlSnippet = `
-    &lt;div className="body-input-header"&gt;<br/>
-    &nbsp;&nbsp;&lt;h1&gt;&#123;RESUME_DATA.content.atoms.component1.name&#125;&lt;/h1&gt;<br/>
-    &nbsp;&nbsp;&lt;h3&gt;&#123;RESUME_DATA.content.atoms.component1.description&#125;&lt;/h3&gt;<br/>
-    &lt;/div&gt;
+    &lt;Alert type={type} message={message} autoClose={autoClose} autoCloseTime={autoCloseTime} />;
   `;
 
   // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.molecules.component1.presentation.props;
 
   return (
     <div>
@@ -37,6 +34,12 @@ export default function AlertPage() {
             <h2>
               {RESUME_DATA.content.molecules.component1.presentation.title}
             </h2>
+            <p>
+              {
+                RESUME_DATA.content.molecules.component1.presentation
+                  .description
+              }
+            </p>
             <div className="example-component"></div>
             <pre>
               <code

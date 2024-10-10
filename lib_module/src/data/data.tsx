@@ -264,24 +264,33 @@ export const RESUME_DATA = {
       component1: {
         name: "Alert",
         description:
-          "Easily create inputs with different statuses and sizes using our components.",
+          "Component used to display alert or information messages to users. It can be used to inform users of an error, success or warning.",
         presentation: {
-          title: "Basic examples",
-          description: "description",
+          title: "Example",
+          description:
+            "Here's a quick example of an Alert component to import into your project:",
           props: {
             title: "How it works",
-            description: "description",
+            description:
+              "Here are the props you can modify to customise your Alert component :",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
+              title: "type",
+              description:
+                "Choose the type of alert. Four possibilities: ‘success’ | ‘error’ | ‘warning’ | ‘info’.",
             },
             props2: {
-              title: "propsInput2",
-              description: "description du props 2",
+              title: "message",
+              description: "Choose the message you want to display.",
             },
             props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "autoClose",
+              description:
+                "Choose how the component closes. Either manually or automatically.",
+            },
+            props4: {
+              title: "autoCloseTime",
+              description:
+                "Select the time after which the component closes and disappears. (for example : autoCloseTime={20} for 20s)",
             },
           },
         },
