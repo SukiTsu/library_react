@@ -31,8 +31,17 @@ pre {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-
 .language-html {
     margin: 0 !important;
     padding: 0 !important;
+}
+
+.description-componant{
+    margin-top: 50px;
+}
+.props-list{
+    list-style-type: none;
+}
+.props-list li{
+    margin: 20px 0 20px 0;
 }

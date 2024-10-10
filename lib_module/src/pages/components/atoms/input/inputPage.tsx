@@ -1,10 +1,9 @@
+import { useEffect } from "react";
 import "../../../../assets/css/pages/input.css";
 import { RESUME_DATA } from "../../../../data/data";
-
 import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
-import { useEffect } from "react";
 
 export default function InputPage() {
   useEffect(() => {
@@ -17,6 +16,8 @@ export default function InputPage() {
     &nbsp;&nbsp;&lt;h3&gt;&#123;RESUME_DATA.content.atoms.component1.description&#125;&lt;/h3&gt;<br/>
     &lt;/div&gt;
   `;
+
+  const props = RESUME_DATA.content.atoms.component1.presentation.props;
 
   return (
     <div>
@@ -38,6 +39,23 @@ export default function InputPage() {
                 dangerouslySetInnerHTML={{ __html: htmlSnippet }}
               ></code>
             </pre>
+            <div className="description-componant">
+              <h2>{props.title}</h2>
+              <p>{props.description}</p>
+              <ul className="props-list">
+                {Object.entries(props).map(([key, propData]) => {
+                  if (typeof propData === "object") {
+                    return (
+                      <li key={key}>
+                        <h3>{propData.title}</h3>
+                        <p>{propData.description}</p>
+                      </li>
+                    );
+                  }
+                  return null; // Ignore non-object entries like "title" or "description"
+                })}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
