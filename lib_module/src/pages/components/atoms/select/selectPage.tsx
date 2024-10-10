@@ -18,6 +18,8 @@ export default function SelectPage() {
     &lt;/div&gt;
   `;
 
+  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+
   return (
     <div>
       <Navbar />
@@ -38,6 +40,22 @@ export default function SelectPage() {
                 dangerouslySetInnerHTML={{ __html: htmlSnippet }}
               ></code>
             </pre>
+            <div className="description-componant">
+              <h2>{props.title}</h2>
+              <p>{props.description}</p>
+              <ul className="props-list">
+                {Object.entries(props).map(([key, propData]) => {
+                  if (typeof propData === "object") {
+                    return (
+                      <li key={key}>
+                        <h3>{propData.title}</h3>
+                        <p>{propData.description}</p>
+                      </li>
+                    );
+                  }
+                })}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
