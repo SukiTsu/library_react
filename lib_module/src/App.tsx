@@ -8,6 +8,7 @@ import accordionConfig from './components/organismes/accordion/accordionConfig';
 import ButtonContainer from './components/atoms/button/ButtonContainer'
 import Loader from './components/atoms/loaders/Loader'
 import { loaderConfig } from './components/atoms/loaders/LoaderConfig'
+import InputForm from './components/atoms/input/InputForm';
 
 
 const App: React.FC = () => {
@@ -19,7 +20,7 @@ const App: React.FC = () => {
                 <Route path="/button" element={<ButtonContainer />} />
                 <Route path="/loader" element={<Loader {...loaderConfig} />} />
                 <Route  path="/select"  element={ <div> <Select {...selectConfig} /></div>} />
-
+                <Route path="/input" element={<InputForm />} />
 
         </Routes>
       </div>
