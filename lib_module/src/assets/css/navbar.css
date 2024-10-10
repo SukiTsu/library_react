@@ -9,3 +9,8 @@
 .navbar h2{
     margin: 0 0 0 50px;
 }
+
+.link-navbar{
+    text-decoration: none;
+    color: blue;
+}
