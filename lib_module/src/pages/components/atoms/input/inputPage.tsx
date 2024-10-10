@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import "../../../../assets/css/pages/input.css";
 import { RESUME_DATA } from "../../../../data/data";
 import Navbar from "../../../../components/presentation/Navbar";

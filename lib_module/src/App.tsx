@@ -1,3 +1,4 @@
+import React from "react";
 import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js";
@@ -24,7 +25,6 @@ import TabsPage from "./pages/components/organismes/tabs/tabsPage";
 import TableauPage from "./pages/components/organismes/tableau/tableauPage";
 
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>
