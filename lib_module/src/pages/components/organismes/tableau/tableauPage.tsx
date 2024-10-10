@@ -17,10 +17,7 @@ export default function TableauPage() {
   }, []); // Le tableau de dépendances vide assure que cette fonction s'exécute seulement une fois après le premier rendu.
 
   const htmlSnippet = `
-    &lt;div className="body-input-header"&gt;<br/>
-    &nbsp;&nbsp;&lt;h1&gt;&#123;RESUME_DATA.content.atoms.component1.name&#125;&lt;/h1&gt;<br/>
-    &nbsp;&nbsp;&lt;h3&gt;&#123;RESUME_DATA.content.atoms.component1.description&#125;&lt;/h3&gt;<br/>
-    &lt;/div&gt;
+    &lt;Tableau data={data} columns={columns} config={customConfig} />
   `;
 
   // Récupération des données depuis le fichier data
@@ -86,8 +83,10 @@ export default function TableauPage() {
                   .description
               }
             </p>
-            <Tableau data={data} columns={columns} config={customConfig} />
-            <div className="example-component"></div>
+
+            <div className="example-component">
+              <Tableau data={data} columns={columns} config={customConfig} />
+            </div>
             <pre>
               <code
                 className="language-html line-numbers"
