@@ -5,6 +5,7 @@ import { RESUME_DATA } from "../../../../data/data";
 import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
+import ButtonContainer from "../../../../components/atoms/button/ButtonContainer";
 
 export default function ButtonPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -21,7 +22,7 @@ export default function ButtonPage() {
   `;
 
   // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.atoms.component6.presentation.props;
 
   return (
     <div>
@@ -38,7 +39,9 @@ export default function ButtonPage() {
             <p>
               {RESUME_DATA.content.atoms.component6.presentation.description}
             </p>
-            <div className="example-component"></div>
+            <div className="example-component">
+            <ButtonContainer />
+            </div>
             <pre>
               <code
                 className="language-html line-numbers"

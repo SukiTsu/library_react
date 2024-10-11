@@ -5,6 +5,7 @@ import { RESUME_DATA } from "../../../../data/data";
 import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
+import Modal from "./Modal";
 
 export default function ModalPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -43,7 +44,7 @@ export default function ModalPage() {
                   .description
               }
             </p>
-            <div className="example-component"></div>
+            <div className="example-component"><Modal title="Mon Titre" content="Exemple de contenu" bkColor="red" position="centered"/></div>
             <pre>
               <code
                 className="language-html line-numbers"

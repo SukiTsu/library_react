@@ -1,0 +1,108 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-overlay.centered {
+    justify-content: center;
+  }
+  
+  .modal-overlay.right {
+    justify-content: flex-end;
+  }
+  
+  .modal-overlay.left {
+    justify-content: flex-start;
+  }
+  
+  .bk {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .bk {
+        max-width: 90%; /* Reduce modal width on smaller screens */
+        padding: 15px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .bk {
+        max-width: 85%;
+        padding: 10px;
+    }
+  }
+  
+  .bk.red {
+    background-color: red;
+    color: white;
+  }
+  
+  .bk.blue {
+    background-color: blue;
+    color: white;
+  }
+  
+  .bk.green {
+    background-color: green;
+    color: black;
+  }
+  
+  .bt-modal-close {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Responsive button size */
+  @media (max-width: 768px) {
+    .bt-modal-close {
+        padding: 8px 16px; /* Reduce button size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .bt-modal-close {
+        padding: 6px 12px;
+    }
+  }
+  
+  .bt-modal-close.blue {
+    background-color: white;
+    color: blue;
+  }
+  
+  .bt-modal-close.blue:hover {
+    background-color: black;
+  }
+  
+  .bt-modal-close.red {
+    background-color: white;
+    color: red;
+  }
+  
+  .bt-modal-close.red:hover {
+    background-color: black;
+  }
+  
+  .bt-modal-close.green {
+    background-color: white;
+    color: green;
+  }
+  
+  .bt-modal-close.green:hover {
+    background-color: black;
+  }
