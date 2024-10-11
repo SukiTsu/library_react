@@ -21,7 +21,7 @@ export default function TableauPage() {
   `;
 
   // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.organismes.component5.presentation.props;
 
   //config du tableau
   const data = [
@@ -85,7 +85,7 @@ export default function TableauPage() {
             </p>
 
             <div className="example-component">
-              <Tableau data={data} columns={columns} config={customConfig} />
+              <Tableau data={data} columns={columns} rowsPerPage={10} />
             </div>
             <pre>
               <code

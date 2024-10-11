@@ -21,7 +21,7 @@ interface TableConfig {
     rowClassName: string;
     cellClassName: string;
   };
-  onRowSelect?: (selectedRows: any[]) => void; // Rendre `onRowSelect` optionnel
+  onRowSelect?: (selectedRows: any[]) => void;
 }
 
 export const DEFAULT_TABLE_CONFIG: TableConfig = {

@@ -5,24 +5,20 @@ import { DEFAULT_TABLE_CONFIG } from "./Tableau_data"; // Importation de la conf
 interface TableProps {
   data: any[];
   columns: { field: string; label: string }[];
-  config?: typeof DEFAULT_TABLE_CONFIG;
+  rowsPerPage?: number; // Propriété facultative pour le nombre de lignes par page
 }
 
-export default function Tableau({
-  data,
-  columns,
-  config = DEFAULT_TABLE_CONFIG,
-}: TableProps) {
+export default function Tableau({ data, columns, rowsPerPage }: TableProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortField, setSortField] = useState<string | null>(
-    config.sorting.defaultField
+    DEFAULT_TABLE_CONFIG.sorting.defaultField
   );
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">(
-    config.sorting.defaultOrder
+    DEFAULT_TABLE_CONFIG.sorting.defaultOrder
   );
   const [selectedRows, setSelectedRows] = useState<any[]>([]);
 
-  // Tri des données
+  // Gestion du tri
   const handleSort = (field: string) => {
     const order = sortField === field && sortOrder === "asc" ? "desc" : "asc";
     setSortField(field);
@@ -38,37 +34,29 @@ export default function Tableau({
     return 0;
   });
 
-  // Pagination
-  const startIndex = (currentPage - 1) * config.pagination.rowsPerPage;
-  const paginatedData = config.pagination.showPagination
-    ? sortedData.slice(startIndex, startIndex + config.pagination.rowsPerPage)
+  // Pagination avec les lignes par page spécifiées
+  const effectiveRowsPerPage =
+    rowsPerPage || DEFAULT_TABLE_CONFIG.pagination.rowsPerPage; // Utilisation de `rowsPerPage` si fourni, sinon la valeur par défaut
+  const startIndex = (currentPage - 1) * effectiveRowsPerPage;
+  const paginatedData = DEFAULT_TABLE_CONFIG.pagination.showPagination
+    ? sortedData.slice(startIndex, startIndex + effectiveRowsPerPage)
     : sortedData;
-
-  // Gestion de la sélection des lignes
-  const handleRowSelect = (row: any) => {
-    const isSelected = selectedRows.includes(row);
-    const newSelectedRows = isSelected
-      ? selectedRows.filter((r) => r !== row)
-      : [...selectedRows, row];
-    setSelectedRows(newSelectedRows);
-    if (config.selectionEnabled && config.onRowSelect)
-      config.onRowSelect(newSelectedRows);
-  };
 
   return (
     <div className="table-container">
-      <table className={config.styling.tableClassName}>
+      <table className={DEFAULT_TABLE_CONFIG.styling.tableClassName}>
         <thead>
           <tr>
-            {config.selectionEnabled && <th></th>}
             {columns.map((col) => (
               <th
                 key={col.field}
-                onClick={() => config.sortable && handleSort(col.field)}
-                className={config.styling.headerClassName}
+                onClick={() =>
+                  DEFAULT_TABLE_CONFIG.sortable && handleSort(col.field)
+                }
+                className={DEFAULT_TABLE_CONFIG.styling.headerClassName}
               >
                 {col.label}
-                {config.sortable && (
+                {DEFAULT_TABLE_CONFIG.sortable && (
                   <span>
                     {sortField === col.field
                       ? sortOrder === "asc"
@@ -83,18 +71,12 @@ export default function Tableau({
         </thead>
         <tbody>
           {paginatedData.map((row, idx) => (
-            <tr key={idx} className={config.styling.rowClassName}>
-              {config.selectionEnabled && (
-                <td>
-                  <input
-                    type="checkbox"
-                    checked={selectedRows.includes(row)}
-                    onChange={() => handleRowSelect(row)}
-                  />
-                </td>
-              )}
+            <tr key={idx} className={DEFAULT_TABLE_CONFIG.styling.rowClassName}>
               {columns.map((col) => (
-                <td key={col.field} className={config.styling.cellClassName}>
+                <td
+                  key={col.field}
+                  className={DEFAULT_TABLE_CONFIG.styling.cellClassName}
+                >
                   {row[col.field]}
                 </td>
               ))}
@@ -103,7 +85,7 @@ export default function Tableau({
         </tbody>
       </table>
 
-      {config.pagination.showPagination && (
+      {DEFAULT_TABLE_CONFIG.pagination.showPagination && (
         <div className="pagination-controls">
           <button
             onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
@@ -116,12 +98,10 @@ export default function Tableau({
           <button
             onClick={() =>
               setCurrentPage((p) =>
-                startIndex + config.pagination.rowsPerPage < data.length
-                  ? p + 1
-                  : p
+                startIndex + effectiveRowsPerPage < data.length ? p + 1 : p
               )
             }
-            disabled={startIndex + config.pagination.rowsPerPage >= data.length}
+            disabled={startIndex + effectiveRowsPerPage >= data.length}
             className="pagination-btn"
           >
             Suivant
