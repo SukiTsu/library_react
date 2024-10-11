@@ -6,6 +6,8 @@ import { RESUME_DATA } from "../../../../data/data";
 import Prism from "prismjs";
 import Navbar from "../../presentation/Navbar";
 import Sidebar from "../../presentation/Sidebar";
+import Card from "./Card";
+const link = 'https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/09/Pokemon-Ash-Feature-Image-1.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5'
 
 export default function CardPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -15,14 +17,11 @@ export default function CardPage() {
   }, []); // Le tableau de dépendances vide assure que cette fonction s'exécute seulement une fois après le premier rendu.
 
   const htmlSnippet = `
-    &lt;div className="body-input-header"&gt;<br/>
-    &nbsp;&nbsp;&lt;h1&gt;&#123;RESUME_DATA.content.atoms.component1.name&#125;&lt;/h1&gt;<br/>
-    &nbsp;&nbsp;&lt;h3&gt;&#123;RESUME_DATA.content.atoms.component1.description&#125;&lt;/h3&gt;<br/>
-    &lt;/div&gt;
+    &lt;Card title="Titre de la page" content="Contenu de la page" srcImg={link} bkColor="red"/>
   `;
 
   // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.molecules.component3.presentation.props;
 
   return (
     <div>
@@ -44,7 +43,9 @@ export default function CardPage() {
                   .description
               }
             </p>
-            <div className="example-component"></div>
+            <div className="example-component">
+              <Card title="Titre de la page" content="Contenu de la page" srcImg={link} bkColor="red"/>
+            </div>
             <pre>
               <code
                 className="language-html line-numbers"

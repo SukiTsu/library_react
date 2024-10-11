@@ -313,24 +313,24 @@ export const RESUME_DATA = {
       component3: {
         name: "Card",
         description:
-          "Easily create inputs with different statuses and sizes using our components.",
+          "Easily create Card with different statuses and sizes using our components.",
         presentation: {
           title: "Basic examples",
-          description: "description",
+          description: "Displays an image in a div with a title and content",
           props: {
             title: "How it works",
-            description: "description",
+            description: "Editable image, title, content and color",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
+              title: "SrcImg",
+              description: "Image path",
             },
             props2: {
-              title: "propsInput2",
-              description: "description du props 2",
+              title: "Title",
+              description: "Content title",
             },
             props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "Content",
+              description: "Component contents",
             },
           },
         },
