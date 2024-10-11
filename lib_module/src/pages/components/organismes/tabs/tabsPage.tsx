@@ -5,7 +5,7 @@ import { RESUME_DATA } from "../../../../data/data";
 import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
-import Tabs from "./tabs";
+import Tabs from "./Tabs";
 
 export default function TabsPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
