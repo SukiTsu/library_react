@@ -403,18 +403,22 @@ export const RESUME_DATA = {
           description: "description",
           props: {
             title: "How it works",
-            description: "description",
+            description: "Composant Modal. Lorsque le bouton est cliqué, un encadré est affiché avec un contenu qui lui est donné",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
+              title: "Title",
+              description: "Texte qui sera affiché en tant que titre dans l'encadré",
             },
             props2: {
-              title: "propsInput2",
-              description: "description du props 2",
+              title: "Content",
+              description: "Contenu qui sera dans l'encadré",
             },
             props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "BkColor",
+              description: "Couleur de fond de l'encadré",
+            },
+            props4: {
+              title: "Position",
+              description: "Position où sera afficher l'encadré",
             },
           },
         },
