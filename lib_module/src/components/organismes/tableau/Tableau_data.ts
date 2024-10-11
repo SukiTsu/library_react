@@ -1,15 +1,18 @@
 // config.ts
 
+// Définition de la configuration pour le tri des colonnes
 interface SortingConfig {
   defaultField: string | null;
   defaultOrder: "asc" | "desc";
 }
 
+// Définition de la configuration pour la pagination
 interface PaginationConfig {
   rowsPerPage: number;
   showPagination: boolean;
 }
 
+// Interface principale pour la configuration du tableau
 interface TableConfig {
   sortable: boolean;
   pagination: PaginationConfig;
@@ -24,6 +27,7 @@ interface TableConfig {
   onRowSelect?: (selectedRows: any[]) => void;
 }
 
+// Configuration par défaut du tableau
 export const DEFAULT_TABLE_CONFIG: TableConfig = {
   sortable: true,
   pagination: {

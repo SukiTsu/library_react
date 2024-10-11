@@ -54,6 +54,16 @@
     background-color: #ddd;
   }
   
+
+.selected-row {
+  background-color: #e0f7fa;
+}
+
+.selected-cell {
+  background-color: #f1f8e9;
+}
+
+
   /* Responsive rules */
   @media (max-width: 768px) {
     .table-container {
