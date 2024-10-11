@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../../../../assets/css/pages/select.css";
+import "../../../../assets/css/example.css";
 import { RESUME_DATA } from "../../../../data/data";
 
 import Navbar from "../../../../components/presentation/Navbar";
@@ -38,7 +38,7 @@ export default function TogglePage() {
             <p>
               {RESUME_DATA.content.atoms.component5.presentation.description}
             </p>
-            <div className="example-component"></div>
+            <div className="example-component centrage"></div>
             <pre>
               <code
                 className="language-html line-numbers"
