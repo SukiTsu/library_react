@@ -6,6 +6,8 @@ import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
 
+import Tableau from "../../../../components/organismes/tableau/Tableau";
+
 export default function TableauPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
   useEffect(() => {
@@ -14,14 +16,68 @@ export default function TableauPage() {
   }, []); // Le tableau de dépendances vide assure que cette fonction s'exécute seulement une fois après le premier rendu.
 
   const htmlSnippet = `
-    &lt;div className="body-input-header"&gt;<br/>
-    &nbsp;&nbsp;&lt;h1&gt;&#123;RESUME_DATA.content.atoms.component1.name&#125;&lt;/h1&gt;<br/>
-    &nbsp;&nbsp;&lt;h3&gt;&#123;RESUME_DATA.content.atoms.component1.description&#125;&lt;/h3&gt;<br/>
-    &lt;/div&gt;
-  `;
+  &lt;Tableau data={data} columns={columns} rowsPerPage={numberOfRowsPerPage} />
+
+  &lt;!-- Exemple des données : -->
+  const data = [
+    { name: "Alice", age: 26, country: "USA" },
+    { name: "Bob", age: 30, country: "UK" },
+    { name: "Fabien", age: 25, country: "FR" },
+    { name: "Alice", age: 26, country: "USA" },
+    { name: "Bob", age: 30, country: "UK" },
+    { name: "Fabien", age: 25, country: "FR" },
+    { name: "Alice", age: 26, country: "USA" },
+    { name: "Bob", age: 30, country: "UK" },
+    { name: "Fabien", age: 25, country: "FR" },
+    { name: "Alice", age: 26, country: "USA" },
+    { name: "Bob", age: 30, country: "UK" },
+    { name: "Fabien", age: 25, country: "FR" },
+    { name: "Alice", age: 26, country: "USA" },
+    { name: "Bob", age: 30, country: "UK" },
+    { name: "Fabien", age: 25, country: "FR" },
+    { name: "Alice", age: 26, country: "USA" },
+    { name: "Bob", age: 30, country: "UK" },
+    { name: "Fabien", age: 25, country: "FR" },
+  ];
+
+  const columns = [
+    { field: "name", label: "Name" },
+    { field: "age", label: "Age" },
+    { field: "country", label: "Country" }
+  ];
+  <br/>
+`;
 
   // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.organismes.component5.presentation.props;
+
+  //config du tableau
+  const data = [
+    { name: "Alice", age: 26, country: "USA" },
+    { name: "Bob", age: 30, country: "UK" },
+    { name: "Fabien", age: 25, country: "FR" },
+    { name: "Alice", age: 26, country: "USA" },
+    { name: "Bob", age: 30, country: "UK" },
+    { name: "Fabien", age: 25, country: "FR" },
+    { name: "Alice", age: 26, country: "USA" },
+    { name: "Bob", age: 30, country: "UK" },
+    { name: "Fabien", age: 25, country: "FR" },
+    { name: "Alice", age: 26, country: "USA" },
+    { name: "Bob", age: 30, country: "UK" },
+    { name: "Fabien", age: 25, country: "FR" },
+    { name: "Alice", age: 26, country: "USA" },
+    { name: "Bob", age: 30, country: "UK" },
+    { name: "Fabien", age: 25, country: "FR" },
+    { name: "Alice", age: 26, country: "USA" },
+    { name: "Bob", age: 30, country: "UK" },
+    { name: "Fabien", age: 25, country: "FR" },
+  ];
+
+  const columns = [
+    { field: "name", label: "Name" },
+    { field: "age", label: "Age" },
+    { field: "country", label: "Country" },
+  ];
 
   return (
     <div>
@@ -43,7 +99,10 @@ export default function TableauPage() {
                   .description
               }
             </p>
-            <div className="example-component"></div>
+
+            <div className="example-component">
+              <Tableau data={data} columns={columns} rowsPerPage={10} />
+            </div>
             <pre>
               <code
                 className="language-html line-numbers"

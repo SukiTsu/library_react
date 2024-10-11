@@ -451,24 +451,29 @@ export const RESUME_DATA = {
       component5: {
         name: "Tableau",
         description:
-          "Easily create inputs with different statuses and sizes using our components.",
+          "Component for displaying, sorting, paging and selecting data in a configurable way.",
         presentation: {
-          title: "Basic examples",
-          description: "description",
+          title: "Example",
+          description:
+            "Here's a quick example of an Tableau component to import into your project:",
           props: {
             title: "How it works",
-            description: "description",
+            description:
+              "Here are the props you can modify to customise your Tableau component :",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
+              title: "data",
+              description:
+                "Provide all the data you want to display in your table.",
             },
             props2: {
-              title: "propsInput2",
-              description: "description du props 2",
+              title: "colums",
+              description:
+                "Provide the types of data to be classified in your table.",
             },
             props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "rowsPerPage",
+              description:
+                "Choose the number of lines per page you wish to display.",
             },
           },
         },
