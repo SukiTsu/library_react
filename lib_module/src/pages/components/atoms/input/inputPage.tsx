@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import "../../../../assets/css/pages/input.css";
 import { RESUME_DATA } from "../../../../data/data";
-import Navbar from "../../../../components/presentation/Navbar";
-import Sidebar from "../../../../components/presentation/Sidebar";
+
 import Prism from "prismjs";
-import InputForm from "../../../../components/atoms/input/InputForm";
+import InputForm from "./InputForm";
+import Navbar from "../../presentation/Navbar";
+import Sidebar from "../../presentation/Sidebar";
 
 export default function InputPage() {
   //Hook useEffect pour exécuter une action après le montage du composant

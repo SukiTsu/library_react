@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../../assets/Select.css";
+import "../../../../assets/Select.css";
 
 export interface SelectProps {
   options?: { value: string; label: string }[];
