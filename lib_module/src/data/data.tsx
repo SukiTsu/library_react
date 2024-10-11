@@ -112,10 +112,10 @@ export const RESUME_DATA = {
       component2: {
         name: "Checkbox",
         description:
-          "Easily create inputs with different statuses and sizes using our components.",
+          "Easily create CheckBox with different statuses and sizes using our components.",
         presentation: {
           title: "Basic examples",
-          description: "description",
+          description: "A title with a list of checkbox values",
           props: {
             title: "How it works",
             description: "CheckBox component with checkbox title.",
@@ -125,11 +125,11 @@ export const RESUME_DATA = {
             },
             props2: {
               title: "ListChek",
-              description: "Liste des mots qui seront accompagné des cases à checker",
+              description: "List of words with checkboxes",
             },
             props3: {
               title: "BkColor",
-              description: "Couleur de fond de la box (red|blue|green)",
+              description: "Box background color (red|blue|green)",
             },
           },
         },
@@ -179,24 +179,20 @@ export const RESUME_DATA = {
       component5: {
         name: "Toggle",
         description:
-          "Easily create inputs with different statuses and sizes using our components.",
+          "Easily create Toggle with different statuses and sizes using our components.",
         presentation: {
           title: "Basic examples",
-          description: "description",
+          description: "A switch button where its shape and color can be modified",
           props: {
             title: "How it works",
-            description: "description",
+            description: "When clicked, its state changes",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
+              title: "Form",
+              description: "Button edge shape",
             },
             props2: {
-              title: "propsInput2",
-              description: "description du props 2",
-            },
-            props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "Color",
+              description: "Button color",
             },
           },
         },
