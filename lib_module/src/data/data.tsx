@@ -428,18 +428,18 @@ export const RESUME_DATA = {
           description: "description",
           props: {
             title: "How it works",
-            description: "description",
+            description: "Composant Tabs listant les liens qui afficheront un contenu lorsqu'ils sont cliqués",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
+              title: "Titles",
+              description: "Liste des titres",
             },
             props2: {
-              title: "propsInput2",
-              description: "description du props 2",
+              title: "ListContent",
+              description: "Liste de contenu qui seront affiché lorsqu'un des titres est cliqué",
             },
             props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "Color",
+              description: "Couleur de fond du tabs",
             },
           },
         },

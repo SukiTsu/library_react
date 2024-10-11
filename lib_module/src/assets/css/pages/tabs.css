@@ -1,0 +1,116 @@
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.tabs-header {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .tabs-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.tab {
+    padding: 1rem;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s, color 0.3s;
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tab a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 576px) {
+    .tab {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+.tab.blue.active {
+    border-color: #007BFF;
+    color: #007BFF;
+}
+
+/**
+    Red
+*/
+.tab.red.active {
+    border-color: red;
+    color: red;
+}
+.tabs-header.red {
+    background: rgb(144, 23, 23);
+}
+
+/*
+    green
+*/
+.tab.green.active {
+    border-color: rgb(0, 233, 0);
+    color: rgb(2, 255, 2);
+}
+.tabs-header.green {
+    background: rgb(72, 203, 72);
+}
+
+
+/*
+    Blue
+*/
+.tab.blue:hover {
+    color: black;
+    background-color: rgb(23, 166, 191);
+}
+
+.tabs-header.blue {
+    background: blue;
+}
+
+.tab.red:hover {
+    color: white;
+    background-color: red;
+}
+
+.tab.green:hover {
+    color: black;
+    background-color: green;
+}
+
+@media (max-width: 768px) {
+    .tab {
+        text-align: left;
+        flex-grow: unset;
+    }
+
+    .tabs-header {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .tab {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .tab a {
+        padding: 0.5rem;
+    }
+}
