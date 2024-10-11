@@ -6,6 +6,7 @@ import { RESUME_DATA } from "../../../../data/data";
 import Prism from "prismjs";
 import Navbar from "../../presentation/Navbar";
 import Sidebar from "../../presentation/Sidebar";
+import Toggle from "./Toggle";
 
 export default function TogglePage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -22,7 +23,7 @@ export default function TogglePage() {
   `;
 
   // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.atoms.component5.presentation.props;
 
   return (
     <div>
@@ -39,7 +40,8 @@ export default function TogglePage() {
             <p>
               {RESUME_DATA.content.atoms.component5.presentation.description}
             </p>
-            <div className="example-component centrage"></div>
+
+            <div className="example-component"><Toggle form="carre" color="blue"/></div>
             <pre>
               <code
                 className="language-html line-numbers"

@@ -8,6 +8,7 @@ import Tabs from "./Tabs";
 import Navbar from "../../presentation/Navbar";
 import Sidebar from "../../presentation/Sidebar";
 
+
 export default function TabsPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function TabsPage() {
   `;
 
   // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.organismes.component4.presentation.props;
 
   return (
     <div>
