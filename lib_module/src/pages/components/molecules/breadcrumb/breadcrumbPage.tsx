@@ -15,10 +15,7 @@ export default function BreadcrumbPage() {
   }, []); // Le tableau de dépendances vide assure que cette fonction s'exécute seulement une fois après le premier rendu.
 
   const htmlSnippet = `
-    &lt;div className="body-input-header"&gt;<br/>
-    &nbsp;&nbsp;&lt;h1&gt;&#123;RESUME_DATA.content.atoms.component1.name&#125;&lt;/h1&gt;<br/>
-    &nbsp;&nbsp;&lt;h3&gt;&#123;RESUME_DATA.content.atoms.component1.description&#125;&lt;/h3&gt;<br/>
-    &lt;/div&gt;
+    &lt;BreadCrumb listOnglet=&#123["Page 1","Page 2"]&#125 listLien=&#123["#","#"]&#125 bkColor="red"/&gt;
   `;
 
   // Récupération des données depuis le fichier data

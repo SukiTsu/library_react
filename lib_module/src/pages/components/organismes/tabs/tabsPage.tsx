@@ -15,10 +15,7 @@ export default function TabsPage() {
   }, []); // Le tableau de dépendances vide assure que cette fonction s'exécute seulement une fois après le premier rendu.
 
   const htmlSnippet = `
-    &lt;div className="body-input-header"&gt;<br/>
-    &nbsp;&nbsp;&lt;h1&gt;&#123;RESUME_DATA.content.atoms.component1.name&#125;&lt;/h1&gt;<br/>
-    &nbsp;&nbsp;&lt;h3&gt;&#123;RESUME_DATA.content.atoms.component1.description&#125;&lt;/h3&gt;<br/>
-    &lt;/div&gt;
+    &lt;Tabs titles=&#123;&#91;"Titre 1", "Titre 2"&#93;&#125; listContent=&#123;&#91;"Contenue du titre 1", "Contenu du titre 2"&#93;&#125; color="red"/&gt;
   `;
 
   // Récupération des données depuis le fichier data

@@ -33,7 +33,7 @@ export default function LoaderPage() {
               {RESUME_DATA.content.atoms.component7.presentation.description}
             </p>
             <div className="example-component">
-            <Loader type={"progress"}/>
+            <Loader type={"spinner"}/>
             </div>
             <pre>
               <code
