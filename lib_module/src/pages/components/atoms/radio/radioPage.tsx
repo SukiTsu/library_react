@@ -3,12 +3,13 @@ import { useState } from "react";
 import "../../../../assets/css/example.css";
 import { RESUME_DATA } from "../../../../data/data";
 
-import Navbar from "../../../../components/presentation/Navbar";
-import Sidebar from "../../../../components/presentation/Sidebar";
+
 import Prism from "prismjs";
 
 import {defaultRadioOptions} from './RadioGroup_data';
 import RadioGroup from './RadioGroup';
+import Navbar from "../../presentation/Navbar";
+import Sidebar from "../../presentation/Sidebar";
 
 export default function RadioPage() {
 

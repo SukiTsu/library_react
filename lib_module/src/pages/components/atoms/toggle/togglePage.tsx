@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import "../../../../assets/css/pages/select.css";
+import "../../../../assets/css/example.css";
 import { RESUME_DATA } from "../../../../data/data";
 
-import Navbar from "../../../../components/presentation/Navbar";
-import Sidebar from "../../../../components/presentation/Sidebar";
+
 import Prism from "prismjs";
+import Navbar from "../../presentation/Navbar";
+import Sidebar from "../../presentation/Sidebar";
 import Toggle from "./Toggle";
 
 export default function TogglePage() {
@@ -39,6 +40,7 @@ export default function TogglePage() {
             <p>
               {RESUME_DATA.content.atoms.component5.presentation.description}
             </p>
+
             <div className="example-component"><Toggle form="carre" color="blue"/></div>
             <pre>
               <code

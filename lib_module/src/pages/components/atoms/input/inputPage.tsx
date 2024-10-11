@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import "../../../../assets/css/pages/input.css";
 import { RESUME_DATA } from "../../../../data/data";
-import Navbar from "../../../../components/presentation/Navbar";
-import Sidebar from "../../../../components/presentation/Sidebar";
+
 import Prism from "prismjs";
+import InputForm from "./InputForm";
+import Navbar from "../../presentation/Navbar";
+import Sidebar from "../../presentation/Sidebar";
 
 export default function InputPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -13,7 +15,7 @@ export default function InputPage() {
   }, []); // Le tableau de dépendances vide assure que cette fonction s'exécute seulement une fois après le premier rendu.
 
   const htmlSnippet = `
-    &lt;Input propsInput1="prop1" propsInput2="prop2" propsInput3="prop3"/>;
+    &lt;InputForm />;
   `;
 
   // Récupération des données depuis le fichier data
@@ -34,7 +36,9 @@ export default function InputPage() {
             <p>
               {RESUME_DATA.content.atoms.component1.presentation.description}
             </p>
-            <div className="example-component"></div>
+            <div className="example-component">
+            <InputForm />
+            </div>
             <pre>
               <code
                 className="language-html line-numbers"

@@ -1,0 +1,45 @@
+:root {
+  --loader-size: 20%;
+  --loader-color: #0080ff;
+}
+
+.progress-bar-container {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 10px;
+  width: var(--loader-size);
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--loader-color);
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.spinner {
+  display: inline-block;
+  width: var(--loader-size);
+  height: var(--loader-size);
+  position: relative;
+}
+
+.spinner-circle {
+  width: 100%;
+  height: 100%;
+  border: 5px solid transparent;
+  border-top-color: var(--loader-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

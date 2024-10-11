@@ -2,26 +2,21 @@ import React, { useEffect } from "react";
 import "../../../../assets/css/pages/select.css";
 import { RESUME_DATA } from "../../../../data/data";
 
-import Navbar from "../../../../components/presentation/Navbar";
-import Sidebar from "../../../../components/presentation/Sidebar";
+
 import Prism from "prismjs";
+import Loader from "./Loader";
+import Navbar from "../../presentation/Navbar";
+import Sidebar from "../../presentation/Sidebar";
 
 export default function LoaderPage() {
-  //Hook useEffect pour exécuter une action après le montage du composant
   useEffect(() => {
-    // Appelle Prism.highlightAll() pour appliquer la coloration syntaxique au contenu de la page après le rendu
     Prism.highlightAll();
-  }, []); // Le tableau de dépendances vide assure que cette fonction s'exécute seulement une fois après le premier rendu.
-
+  }, []);
   const htmlSnippet = `
-    &lt;div className="body-input-header"&gt;<br/>
-    &nbsp;&nbsp;&lt;h1&gt;&#123;RESUME_DATA.content.atoms.component1.name&#125;&lt;/h1&gt;<br/>
-    &nbsp;&nbsp;&lt;h3&gt;&#123;RESUME_DATA.content.atoms.component1.description&#125;&lt;/h3&gt;<br/>
-    &lt;/div&gt;
+    &lt;Loader type={progress}/>
   `;
 
-  // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.atoms.component7.presentation.props;
 
   return (
     <div>
@@ -38,7 +33,9 @@ export default function LoaderPage() {
             <p>
               {RESUME_DATA.content.atoms.component7.presentation.description}
             </p>
-            <div className="example-component"></div>
+            <div className="example-component">
+            <Loader type={"progress"}/>
+            </div>
             <pre>
               <code
                 className="language-html line-numbers"
@@ -50,7 +47,6 @@ export default function LoaderPage() {
               <h2>{props.title}</h2>
               <p>{props.description}</p>
               <ul className="props-list">
-                {/* Boucle sur chaque prop du fichier data pour afficher son titre et sa description. */}
                 {Object.entries(props).map(([key, propData]) => {
                   if (typeof propData === "object") {
                     return (
