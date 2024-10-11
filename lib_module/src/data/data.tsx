@@ -457,7 +457,7 @@ export const RESUME_DATA = {
         description:
           "Component for displaying, sorting, paging and selecting data in a configurable way.",
         presentation: {
-          title: "Basic examples",
+          title: "Example",
           description:
             "Here's a quick example of an Tableau component to import into your project:",
           props: {
