@@ -1,0 +1,178 @@
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  /* For mobile, use a more compact layout */
+  @media (max-width: 768px) {
+    .custom-checkbox {
+        padding: 5px;
+    }
+    
+    .label-check label {
+        font-size: 14px; /* Smaller font for mobile */
+        padding-left: 25px; /* Adjust padding for checkbox */
+    }
+  
+    .label-check label::before {
+        width: 18px; /* Smaller checkbox */
+        height: 18px;
+    }
+    
+    .label-check label::after {
+        left: 5px; /* Adjust the checkmark position */
+        top: 1px;
+        width: 5px;
+        height: 10px;
+    }
+  }
+  
+  .label-check input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .label-check label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .label-check label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid green;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  
+  .label-check label::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .label-check input[type="checkbox"]:checked + label::after {
+    opacity: 1;
+  }
+  
+  .label-check input[type="checkbox"]:focus + label::before {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  }
+  
+  .container-label-check {
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap; /* Allows wrapping of items for smaller screens */
+  }
+  
+  .label-check {
+    margin: 5px 5px;
+  }
+  
+  /* For tablet and smaller screens, stack items vertically */
+  @media (max-width: 992px) {
+    .container-label-check {
+        flex-direction: column;
+        align-items: flex-start; /* Align labels to the left */
+    }
+  }
+  
+  .custom-checkbox label::before {
+    border-color: black;
+  }
+  
+  /* Styles for different color themes (red, blue, green) */
+  .custom-checkbox.red {
+    background: red;
+  }
+  .custom-checkbox.red h1 {
+    color: white;
+  }
+  .custom-checkbox.red label {
+    color: white;
+  }
+  .custom-checkbox.red label:hover {
+    color: rgb(251, 255, 0);
+  }
+  /*Checked*/
+  .custom-checkbox.red input[type="checkbox"]:checked + label::before {
+    background-color: orange;
+    border-color: rgb(125, 81, 1);
+  }
+  
+  .custom-checkbox.blue {
+    background: blue;
+  }
+  .custom-checkbox.blue h1 {
+    color: white;
+  }
+  .custom-checkbox.blue label {
+    color: white;
+  }
+  .custom-checkbox.blue input[type="checkbox"]:checked + label::before {
+    background-color: cyan;
+    border-color: rgb(6, 126, 126);
+  }
+  
+  .custom-checkbox.green {
+    background: green;
+  }
+  .custom-checkbox.green h1 {
+    color: black;
+  }
+  .custom-checkbox.green label {
+    color: black;
+  }
+  .custom-checkbox.green label:hover {
+    color: rgb(0, 255, 0);
+  }
+  .custom-checkbox.green input[type="checkbox"]:checked + label::before {
+    background-color: cyan;
+    border-color: rgb(0, 122, 122);
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 576px) {
+    .custom-checkbox {
+        padding: 5px;
+    }
+  
+    .container-label-check {
+        padding: 5px;
+    }
+  
+    .label-check label {
+        font-size: 13px;
+        padding-left: 20px;
+    }
+  
+    .label-check label::before {
+        width: 15px;
+        height: 15px;
+    }
+  
+    .label-check label::after {
+        left: 4px;
+        top: 1px;
+        width: 5px;
+        height: 9px;
+    }
+  }

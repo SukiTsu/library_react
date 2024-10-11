@@ -119,18 +119,18 @@ export const RESUME_DATA = {
           description: "description",
           props: {
             title: "How it works",
-            description: "description",
+            description: "CheckBox component with checkbox title.",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
+              title: "Title",
+              description: "Title displayed above checkboxes",
             },
             props2: {
-              title: "propsInput2",
-              description: "description du props 2",
+              title: "ListChek",
+              description: "Liste des mots qui seront accompagné des cases à checker",
             },
             props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "BkColor",
+              description: "Couleur de fond de la box (red|blue|green)",
             },
           },
         },
@@ -171,16 +171,8 @@ export const RESUME_DATA = {
             title: "How it works",
             description: "description",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
-            },
-            props2: {
-              title: "propsInput2",
-              description: "description du props 2",
-            },
-            props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "defaultRadioOptions",
+              description: "Object containing radio buttons description.",
             },
           },
         },
@@ -306,10 +298,10 @@ export const RESUME_DATA = {
           description: "description",
           props: {
             title: "How it works",
-            description: "description",
+            description: "Composant Breadcrumbs qui affiche une liste d'onglets.",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
+              title: "ListOnglet",
+              description: "Liste d'onglet qui seront listés",
             },
             props2: {
               title: "propsInput2",
@@ -413,18 +405,22 @@ export const RESUME_DATA = {
           description: "description",
           props: {
             title: "How it works",
-            description: "description",
+            description: "Composant Modal. Lorsque le bouton est cliqué, un encadré est affiché avec un contenu qui lui est donné",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
+              title: "Title",
+              description: "Texte qui sera affiché en tant que titre dans l'encadré",
             },
             props2: {
-              title: "propsInput2",
-              description: "description du props 2",
+              title: "Content",
+              description: "Contenu qui sera dans l'encadré",
             },
             props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "BkColor",
+              description: "Couleur de fond de l'encadré",
+            },
+            props4: {
+              title: "Position",
+              description: "Position où sera afficher l'encadré",
             },
           },
         },
@@ -438,18 +434,18 @@ export const RESUME_DATA = {
           description: "description",
           props: {
             title: "How it works",
-            description: "description",
+            description: "Composant Tabs listant les liens qui afficheront un contenu lorsqu'ils sont cliqués",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
+              title: "Titles",
+              description: "Liste des titres",
             },
             props2: {
-              title: "propsInput2",
-              description: "description du props 2",
+              title: "ListContent",
+              description: "Liste de contenu qui seront affiché lorsqu'un des titres est cliqué",
             },
             props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "Color",
+              description: "Couleur de fond du tabs",
             },
           },
         },
@@ -457,24 +453,29 @@ export const RESUME_DATA = {
       component5: {
         name: "Tableau",
         description:
-          "Easily create inputs with different statuses and sizes using our components.",
+          "Component for displaying, sorting, paging and selecting data in a configurable way.",
         presentation: {
-          title: "Basic examples",
-          description: "description",
+          title: "Example",
+          description:
+            "Here's a quick example of an Tableau component to import into your project:",
           props: {
             title: "How it works",
-            description: "description",
+            description:
+              "Here are the props you can modify to customise your Tableau component :",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
+              title: "data",
+              description:
+                "Provide all the data you want to display in your table.",
             },
             props2: {
-              title: "propsInput2",
-              description: "description du props 2",
+              title: "colums",
+              description:
+                "Provide the types of data to be classified in your table.",
             },
             props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "rowsPerPage",
+              description:
+                "Choose the number of lines per page you wish to display.",
             },
           },
         },

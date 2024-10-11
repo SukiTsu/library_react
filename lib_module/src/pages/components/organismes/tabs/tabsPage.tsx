@@ -5,6 +5,7 @@ import { RESUME_DATA } from "../../../../data/data";
 import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
+import Tabs from "./tabs";
 
 export default function TabsPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -43,7 +44,7 @@ export default function TabsPage() {
                   .description
               }
             </p>
-            <div className="example-component"></div>
+            <div className="example-component"><Tabs titles={["Titre 1", "Titre 2"]} listContent={["Contenue du titre 1", "Contenu du titre 2"]} color="red"/></div>
             <pre>
               <code
                 className="language-html line-numbers"

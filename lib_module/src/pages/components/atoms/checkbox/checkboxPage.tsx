@@ -5,6 +5,7 @@ import { RESUME_DATA } from "../../../../data/data";
 import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
+import CheckBox from "./Checkbox";
 
 export default function CheckboxPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -38,7 +39,7 @@ export default function CheckboxPage() {
             <p>
               {RESUME_DATA.content.atoms.component2.presentation.description}
             </p>
-            <div className="example-component"></div>
+            <div className="example-component"><CheckBox titleBox="Titre" listChek={["Valeur 1", "Valeur 2"]} bkColor="red"/></div>
             <pre>
               <code
                 className="language-html line-numbers"
