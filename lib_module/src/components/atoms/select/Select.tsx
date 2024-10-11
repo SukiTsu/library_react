@@ -1,34 +1,35 @@
 import React from 'react';
-import "../../../assets/Select.css"
-import { SelectProps } from './SelectConfig';
+import "../../../assets/Select.css";
 
+export interface SelectProps {
+  options?: { value: string; label: string }[];
+  label?: string; 
+  required?: boolean;
+  multiple?: boolean;
+}
 
+const defaultOptions = [
+  { value: 'option1', label: 'Option 1' },
+  { value: 'option2', label: 'Option 2' },
+  { value: 'option3', label: 'Option 3' },
+];
 
 const Select: React.FC<SelectProps> = ({
-  options,
+  options = defaultOptions,
   label,
   required,
   multiple,
-  customStyles,
 }) => {
   return (
-    <div style={{ marginBottom: '15px' }}>
+    <div className="select-container">
       {label && (
-        <label className="input-label" style={{ color: customStyles?.labelColor }}>
+        <label className="input-label">
           {label}
         </label>
       )}
       <select
         required={required}
         multiple={multiple}
-        style={{
-          borderColor: customStyles?.borderColor,
-          backgroundColor: customStyles?.backgroundColor,
-          color: customStyles?.textColor,
-          width: customStyles?.width,
-          borderRadius: customStyles?.borderRadius,
-          padding: '10px',
-        }}
         className="input-field"
       >
         {options.map((option) => (

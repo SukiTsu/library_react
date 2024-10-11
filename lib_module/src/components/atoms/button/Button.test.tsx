@@ -47,27 +47,43 @@ describe('Button component', () => {
     };
     renderButton(props);
     
-    expect(screen.getByRole('status')).toBeInTheDocument();
+    expect(screen.getByText('Loading...')).toBeInTheDocument();
     expect(screen.queryByText('Submit')).not.toBeInTheDocument();
   });
 
-  test('applies custom styles', () => {
+  test('renders primary button', () => {
     const props: ButtonProps = {
-      label: 'Styled Button',
+      label: 'Primary Button',
       onClick: jest.fn(),
-      customStyles: {
-        backgroundColor: '#ff0000',
-        color: '#ffffff',
-        borderRadius: '10px',
-      },
+      type: 'primary',
     };
     renderButton(props);
+    
+    const button = screen.getByText('Primary Button') as HTMLButtonElement;
+    expect(button).toHaveClass('button primary');
+  });
 
-    const button = screen.getByText('Styled Button') as HTMLButtonElement;
-    expect(button).toHaveStyle(`
-      background-color: #ff0000;
-      color: #ffffff;
-      border-radius: 10px;
-    `);
+  test('renders secondary button', () => {
+    const props: ButtonProps = {
+      label: 'Secondary Button',
+      onClick: jest.fn(),
+      type: 'secondary',
+    };
+    renderButton(props);
+    
+    const button = screen.getByText('Secondary Button') as HTMLButtonElement;
+    expect(button).toHaveClass('button secondary');
+  });
+
+  test('renders danger button', () => {
+    const props: ButtonProps = {
+      label: 'Danger Button',
+      onClick: jest.fn(),
+      type: 'danger',
+    };
+    renderButton(props);
+    
+    const button = screen.getByText('Danger Button') as HTMLButtonElement;
+    expect(button).toHaveClass('button danger');
   });
 });

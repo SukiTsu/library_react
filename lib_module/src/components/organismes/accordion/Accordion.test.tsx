@@ -1,23 +1,26 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Accordion from './Accordion';
-import { sections } from './sections';
+import Accordion, { Section } from './Accordion'; 
+
+const sections: Section[] = [
+    { title: 'Section 1', content: 'Contenu de la section 1' },
+    { title: 'Section 2', content: 'Contenu de la section 2' },
+    { title: 'Section 3', content: 'Contenu de la section 3' },
+];
 
 describe('Accordion component', () => {
     test('opens and closes a section when clicked (single section open)', () => {
         render(<Accordion />);
-    
+
         const firstSectionTitle = screen.getByText(sections[0].title);
         const firstSectionContent = sections[0].content;
-    
+
         expect(screen.queryByText(firstSectionContent)).not.toBeInTheDocument();
-    
+
         fireEvent.click(firstSectionTitle);
-    
         expect(screen.getByText(firstSectionContent)).toBeInTheDocument();
-    
+
         fireEvent.click(firstSectionTitle);
-    
         expect(screen.queryByText(firstSectionContent)).not.toBeInTheDocument();
     });
 

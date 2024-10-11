@@ -1,11 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Select from './Select';
-import { SelectProps } from './SelectConfig';
 
 describe('Select component', () => {
   test('renders select with options correctly', () => {
-    const props: SelectProps = {
+    const props = {
       options: [
         { value: '1', label: 'Option 1' },
         { value: '2', label: 'Option 2' },
@@ -14,7 +13,6 @@ describe('Select component', () => {
       label: 'Choose an option:',
       required: false,
       multiple: false,
-      customStyles: {},
     };
 
     render(<Select {...props} />);
@@ -31,12 +29,11 @@ describe('Select component', () => {
   });
 
   test('renders label correctly', () => {
-    const props: SelectProps = {
+    const props = {
       options: [{ value: '1', label: 'Option 1' }],
       label: 'Test Label',
       required: false,
       multiple: false,
-      customStyles: {},
     };
 
     render(<Select {...props} />);
@@ -45,33 +42,8 @@ describe('Select component', () => {
     expect(labelElement).toBeInTheDocument();
   });
 
-  test('applies custom styles', () => {
-    const props: SelectProps = {
-      options: [{ value: '1', label: 'Option 1' }],
-      label: 'Styled Select',
-      required: false,
-      multiple: false,
-      customStyles: {
-        borderColor: 'blue',
-        backgroundColor: 'lightgray',
-        textColor: 'black',
-        width: '300px',
-        borderRadius: '5px',
-      },
-    };
-
-    render(<Select {...props} />);
-
-    const selectElement = screen.getByRole('combobox');
-    expect(selectElement).toHaveStyle('border-color: blue');
-    expect(selectElement).toHaveStyle('background-color: lightgray');
-    expect(selectElement).toHaveStyle('color: black');
-    expect(selectElement).toHaveStyle('width: 300px');
-    expect(selectElement).toHaveStyle('border-radius: 5px');
-  });
-
   test('renders multiple select correctly', () => {
-    const props: SelectProps = {
+    const props = {
       options: [
         { value: '1', label: 'Option 1' },
         { value: '2', label: 'Option 2' },
@@ -79,7 +51,6 @@ describe('Select component', () => {
       label: 'Multiple Select',
       required: false,
       multiple: true,
-      customStyles: {},
     };
 
     render(<Select {...props} />);
@@ -89,12 +60,11 @@ describe('Select component', () => {
   });
 
   test('renders required select', () => {
-    const props: SelectProps = {
+    const props = {
       options: [{ value: '1', label: 'Option 1' }],
       label: 'Required Select',
       required: true,
       multiple: false,
-      customStyles: {},
     };
 
     render(<Select {...props} />);

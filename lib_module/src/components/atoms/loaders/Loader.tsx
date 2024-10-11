@@ -1,21 +1,22 @@
 import React from 'react';
 import '../../../assets/Loader.css';
-import { LoaderProps } from './LoaderConfig';
+
+export interface LoaderProps {
+  type: 'spinner' | 'progress';
+  progress?: number; 
+}
 
 const Loader: React.FC<LoaderProps> = ({
   type,
-  size,
-  progress,
-  customStyles,
+  progress = 0,
 }) => {
   if (type === 'progress') {
     return (
-      <div className="progress-bar-container" style={{ width: `${size}` }} role="progressbar">
+      <div className="progress-bar-container" role="progressbar">
         <div
           className="progress-bar"
           style={{
             width: `${progress}%`,
-            backgroundColor: customStyles?.color,
           }}
         />
       </div>
@@ -23,13 +24,8 @@ const Loader: React.FC<LoaderProps> = ({
   }
 
   return (
-    <div className="spinner" style={{ width: size, height: size }} role="img">
-      <div
-        className="spinner-circle"
-        style={{
-          borderColor: customStyles?.color || '#0080ff',
-        }}
-      />
+    <div className="spinner" role="img">
+      <div className="spinner-circle" />
     </div>
   );
 };

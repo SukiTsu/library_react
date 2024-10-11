@@ -1,7 +1,17 @@
 import React from 'react';
-import { InputProps } from './InputConfig';
+import '../../../assets/Input.css';
 
+export interface InputProps {
+  type: string;
+  label?: string; 
+  placeholder?: string;
+  required?: boolean;
+  minLength?: number;
+  maxLength?: number;
+  disabled?: boolean;
+  readOnly?: boolean;
 
+}
 
 const Input: React.FC<InputProps> = ({
   type,
@@ -12,12 +22,11 @@ const Input: React.FC<InputProps> = ({
   maxLength,
   disabled,
   readOnly,
-  customStyles
 }) => {
   return (
     <div style={{ marginBottom: '15px' }}>
       {label && (
-        <label className="input-label" style={{ color: customStyles?.labelColor }}>
+        <label className="input-label">
           {label}
         </label>
       )}
@@ -29,14 +38,6 @@ const Input: React.FC<InputProps> = ({
         maxLength={maxLength}
         disabled={disabled}
         readOnly={readOnly}
-        style={{
-          borderColor: customStyles?.borderColor,
-          backgroundColor: customStyles?.backgroundColor,
-          color: customStyles?.textColor,
-          width: customStyles?.width,
-          borderRadius: customStyles?.borderRadius,
-          textAlign: customStyles?.textAlign,
-        }}
         className="input-field"
       />
     </div>

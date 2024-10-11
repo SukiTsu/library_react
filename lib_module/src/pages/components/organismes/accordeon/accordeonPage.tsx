@@ -6,7 +6,6 @@ import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
 import Accordion from "../../../../components/organismes/accordion/Accordion";
-import accordionConfig from "../../../../components/organismes/accordion/accordionConfig";
 
 export default function AccordeonPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -46,7 +45,7 @@ export default function AccordeonPage() {
               }
             </p>
             <div className="example-component">
-            <Accordion {...accordionConfig} />
+            <Accordion allowMultipleOpen={false} customStyles={{ displayMode: 'row' }} />
             </div>
             <pre>
               <code

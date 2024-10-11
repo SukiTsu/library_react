@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../../../assets/Accordion.css';
-import { sections } from './sections';
 
 export interface Section {
   title: string;
@@ -21,6 +20,12 @@ export interface AccordionProps {
   };
 }
 
+const sections: Section[] = [
+  { title: 'Section 1', content: 'Contenu de la section 1' },
+  { title: 'Section 2', content: 'Contenu de la section 2' },
+  { title: 'Section 3', content: 'Contenu de la section 3' },
+];
+
 const AccordionSection: React.FC<{
   title: string;
   content: string;
@@ -40,7 +45,6 @@ const AccordionSection: React.FC<{
       >
         {title}
       </button>
-      {/* Rendu conditionnel du contenu */}
       {isOpen && (
         <div 
           id={title} 
@@ -78,7 +82,7 @@ const Accordion: React.FC<AccordionProps> = ({
     borderRadius,
     backgroundColor,
     alignment,
-    displayMode,
+    displayMode = 'column',
   } = customStyles;
 
   return (

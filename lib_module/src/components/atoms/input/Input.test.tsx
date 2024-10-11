@@ -1,11 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Input from './Input';
-import { InputProps } from './InputConfig';
 
 describe('Input component', () => {
   test('renders input with label and placeholder correctly', () => {
-    const props: InputProps = {
+    const props = {
       type: 'text',
       label: 'Test Label',
       placeholder: 'Enter text',
@@ -14,7 +13,6 @@ describe('Input component', () => {
       maxLength: 50,
       disabled: false,
       readOnly: false,
-      customStyles: {},
     };
 
     render(<Input {...props} />);
@@ -26,39 +24,8 @@ describe('Input component', () => {
     expect(inputElement).toBeInTheDocument();
   });
 
-  test('applies custom styles', () => {
-    const props: InputProps = {
-      type: 'text',
-      label: 'Styled Input',
-      placeholder: 'Styled Placeholder',
-      required: false,
-      minLength: 0,
-      maxLength: 50,
-      disabled: false,
-      readOnly: false,
-      customStyles: {
-        borderColor: 'blue',
-        backgroundColor: 'lightgray',
-        textColor: 'black',
-        width: '300px',
-        borderRadius: '5px',
-        textAlign: 'center',
-      },
-    };
-
-    render(<Input {...props} />);
-
-    const inputElement = screen.getByPlaceholderText('Styled Placeholder');
-    expect(inputElement).toHaveStyle('border-color: blue');
-    expect(inputElement).toHaveStyle('background-color: lightgray');
-    expect(inputElement).toHaveStyle('color: black');
-    expect(inputElement).toHaveStyle('width: 300px');
-    expect(inputElement).toHaveStyle('border-radius: 5px');
-    expect(inputElement).toHaveStyle('text-align: center');
-  });
-
   test('renders required input', () => {
-    const props: InputProps = {
+    const props = {
       type: 'text',
       label: 'Required Input',
       placeholder: 'Required Placeholder',
@@ -67,7 +34,6 @@ describe('Input component', () => {
       maxLength: 50,
       disabled: false,
       readOnly: false,
-      customStyles: {},
     };
 
     render(<Input {...props} />);
@@ -77,7 +43,7 @@ describe('Input component', () => {
   });
 
   test('renders disabled input', () => {
-    const props: InputProps = {
+    const props = {
       type: 'text',
       label: 'Disabled Input',
       placeholder: 'Disabled Placeholder',
@@ -86,7 +52,6 @@ describe('Input component', () => {
       maxLength: 50,
       disabled: true,
       readOnly: false,
-      customStyles: {},
     };
 
     render(<Input {...props} />);
@@ -96,7 +61,7 @@ describe('Input component', () => {
   });
 
   test('renders readOnly input', () => {
-    const props: InputProps = {
+    const props = {
       type: 'text',
       label: 'ReadOnly Input',
       placeholder: 'ReadOnly Placeholder',
@@ -105,7 +70,6 @@ describe('Input component', () => {
       maxLength: 50,
       disabled: false,
       readOnly: true,
-      customStyles: {},
     };
 
     render(<Input {...props} />);

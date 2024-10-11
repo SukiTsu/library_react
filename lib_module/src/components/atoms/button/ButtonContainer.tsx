@@ -1,13 +1,24 @@
 import React from 'react';
 import Button from './Button';
-import { buttonPrimaryConfig, buttonSecondaryConfig, buttonDangerConfig } from './ButtonConfig';
 
 const ButtonContainer: React.FC = () => {
   return (
     <div className="button-container">
-      <Button {...buttonPrimaryConfig} />
-      <Button {...buttonSecondaryConfig} />
-      <Button {...buttonDangerConfig} />
+      <Button
+        label="Submit"
+        onClick={() => alert('Primary button clicked!')}
+        type="primary"
+      />
+      <Button
+        label="Cancel"
+        onClick={() => alert('Secondary button clicked!')}
+        type="secondary"
+      />
+      <Button
+        label="Delete"
+        onClick={() => alert('Danger button clicked!')}
+        type="danger"
+      />
     </div>
   );
 };
