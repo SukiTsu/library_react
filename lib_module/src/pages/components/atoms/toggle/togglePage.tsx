@@ -16,10 +16,7 @@ export default function TogglePage() {
   }, []); // Le tableau de dépendances vide assure que cette fonction s'exécute seulement une fois après le premier rendu.
 
   const htmlSnippet = `
-    &lt;div className="body-input-header"&gt;<br/>
-    &nbsp;&nbsp;&lt;h1&gt;&#123;RESUME_DATA.content.atoms.component1.name&#125;&lt;/h1&gt;<br/>
-    &nbsp;&nbsp;&lt;h3&gt;&#123;RESUME_DATA.content.atoms.component1.description&#125;&lt;/h3&gt;<br/>
-    &lt;/div&gt;
+    &lt;Toggle form="carre" color="blue"/&gt;
   `;
 
   // Récupération des données depuis le fichier data
