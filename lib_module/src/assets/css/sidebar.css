@@ -1,0 +1,27 @@
+.sidebar{
+    width: 15%;
+    height: 100vw;
+    /*border-right: 1px solid grey;*/
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 50px;
+}
+.sidebar h2{
+    text-align: center;
+}
+.components-category{
+    margin-left: 50px;
+}
+.sidebar ul{
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar ul li{
+    margin-bottom: 10px;
+}
+
+.components-link{
+    text-decoration: none;
+    color: black;
+}

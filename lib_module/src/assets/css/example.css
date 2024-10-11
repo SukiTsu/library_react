@@ -1,0 +1,5 @@
+.centrage{
+    display: flex;
+    justify-content: center;  /* Centrage horizontal */
+    align-items: center;      /* Centrage vertical */
+}

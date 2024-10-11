@@ -1,0 +1,57 @@
+.body-input{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+}
+.body-input-presentation{
+    display: flex;
+    flex-direction: column;
+    /*margin: 40px 0 0 40px;*/
+    width: 75%;
+    position: relative;
+    margin-left: 250px; /* Espace pour la largeur de la sidebar */
+    padding-top: 50px; /* Espace pour la hauteur de la navbar */
+}
+.body-input-text{
+    margin-top: 50px;
+}
+
+.example-component {
+    min-height: 100px;
+    height: auto;
+    border: solid rgba(128, 128, 128, 0.337);
+    border-width: 1.5px 1.5px 0 1.5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+pre {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.language-html {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.description-componant{
+    margin-top: 50px;
+}
+.props-list{
+    list-style-type: none;
+}
+.props-list li{
+    margin: 20px 0 20px 0;
+}
