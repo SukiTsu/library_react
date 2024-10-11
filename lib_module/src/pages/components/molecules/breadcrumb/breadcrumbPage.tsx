@@ -5,6 +5,7 @@ import { RESUME_DATA } from "../../../../data/data";
 import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
+import BreadCrumb from "./BreadCrumb";
 
 export default function BreadcrumbPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -43,7 +44,7 @@ export default function BreadcrumbPage() {
                   .description
               }
             </p>
-            <div className="example-component"></div>
+            <div className="example-component"><BreadCrumb listOnglet={["Page 1","Page 2"]} listLien={["#","#"]} bkColor="red"/></div>
             <pre>
               <code
                 className="language-html line-numbers"

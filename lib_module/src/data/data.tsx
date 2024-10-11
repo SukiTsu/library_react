@@ -118,18 +118,18 @@ export const RESUME_DATA = {
           description: "description",
           props: {
             title: "How it works",
-            description: "description",
+            description: "CheckBox component with checkbox title.",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
+              title: "Title",
+              description: "Title displayed above checkboxes",
             },
             props2: {
-              title: "propsInput2",
-              description: "description du props 2",
+              title: "ListChek",
+              description: "Liste des mots qui seront accompagné des cases à checker",
             },
             props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "BkColor",
+              description: "Couleur de fond de la box (red|blue|green)",
             },
           },
         },
@@ -296,10 +296,10 @@ export const RESUME_DATA = {
           description: "description",
           props: {
             title: "How it works",
-            description: "description",
+            description: "Composant Breadcrumbs qui affiche une liste d'onglets.",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
+              title: "ListOnglet",
+              description: "Liste d'onglet qui seront listés",
             },
             props2: {
               title: "propsInput2",
