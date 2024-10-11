@@ -1,12 +1,23 @@
 import React, { useEffect } from "react";
-import "../../../../assets/css/pages/select.css";
+import { useState } from "react";
+import "../../../../assets/css/example.css";
 import { RESUME_DATA } from "../../../../data/data";
 
 import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
 
+import {defaultRadioOptions} from './RadioGroup_data';
+import RadioGroup from './RadioGroup';
+
 export default function RadioPage() {
+
+  const [selectedValue, setSelectedValue] = useState<string>('option1');
+
+  const handleRadioChange = (value: string) => {
+    setSelectedValue(value);
+  };
+
   //Hook useEffect pour exécuter une action après le montage du composant
   useEffect(() => {
     // Appelle Prism.highlightAll() pour appliquer la coloration syntaxique au contenu de la page après le rendu
@@ -21,7 +32,7 @@ export default function RadioPage() {
   `;
 
   // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.atoms.component4.presentation.props;
 
   return (
     <div>
@@ -38,7 +49,8 @@ export default function RadioPage() {
             <p>
               {RESUME_DATA.content.atoms.component4.presentation.description}
             </p>
-            <div className="example-component"></div>
+            <div className="example-component centrage" data-testid="radiogrouptest"><RadioGroup options={defaultRadioOptions} name="example" selectedValue={selectedValue}  onChange={handleRadioChange}
+      /></div>
             <pre>
               <code
                 className="language-html line-numbers"

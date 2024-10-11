@@ -170,16 +170,8 @@ export const RESUME_DATA = {
             title: "How it works",
             description: "description",
             props1: {
-              title: "propsInput1",
-              description: "description du props 1",
-            },
-            props2: {
-              title: "propsInput2",
-              description: "description du props 2",
-            },
-            props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "defaultRadioOptions",
+              description: "Object containing radio buttons description.",
             },
           },
         },
