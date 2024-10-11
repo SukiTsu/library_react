@@ -475,8 +475,9 @@ export const RESUME_DATA = {
                 "Provide the types of data to be classified in your table.",
             },
             props3: {
-              title: "config",
-              description: "description du props 3",
+              title: "rowsPerPage",
+              description:
+                "Choose the number of lines per page you wish to display.",
             },
           },
         },
