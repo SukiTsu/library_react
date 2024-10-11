@@ -3,11 +3,11 @@
   }
   
   .input-label {
-    color: grey;
+    color: rgb(67, 50, 50);
   }
   
   .input-field {
-    border-color: red;
+    border-color:#0080ff;
     background-color: #ccc;
     color: black;
     width: 100%;

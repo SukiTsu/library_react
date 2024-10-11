@@ -17,9 +17,11 @@ describe('Input component', () => {
 
     render(<Input {...props} />);
 
+    // Vérifie si le label est rendu correctement
     const labelElement = screen.getByText('Test Label');
     expect(labelElement).toBeInTheDocument();
 
+    // Vérifie si l'input est rendu correctement avec le placeholder
     const inputElement = screen.getByPlaceholderText('Enter text');
     expect(inputElement).toBeInTheDocument();
   });
@@ -39,7 +41,7 @@ describe('Input component', () => {
     render(<Input {...props} />);
 
     const inputElement = screen.getByPlaceholderText('Required Placeholder');
-    expect(inputElement).toBeRequired();
+    expect(inputElement).toBeRequired(); // Vérifie que l'input est requis
   });
 
   test('renders disabled input', () => {
@@ -57,7 +59,7 @@ describe('Input component', () => {
     render(<Input {...props} />);
 
     const inputElement = screen.getByPlaceholderText('Disabled Placeholder');
-    expect(inputElement).toBeDisabled();
+    expect(inputElement).toBeDisabled(); // Vérifie que l'input est désactivé
   });
 
   test('renders readOnly input', () => {
@@ -75,6 +77,25 @@ describe('Input component', () => {
     render(<Input {...props} />);
 
     const inputElement = screen.getByPlaceholderText('ReadOnly Placeholder');
-    expect(inputElement).toHaveAttribute('readonly');
+    expect(inputElement).toHaveAttribute('readonly'); 
+  });
+
+  test('correctly sets minLength and maxLength', () => {
+    const props = {
+      type: 'text',
+      label: 'Length Input',
+      placeholder: 'Length Placeholder',
+      required: false,
+      minLength: 5,
+      maxLength: 10,
+      disabled: false,
+      readOnly: false,
+    };
+
+    render(<Input {...props} />);
+
+    const inputElement = screen.getByPlaceholderText('Length Placeholder');
+    expect(inputElement).toHaveAttribute('minlength', '5');
+    expect(inputElement).toHaveAttribute('maxlength', '10');
   });
 });

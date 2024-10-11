@@ -22,7 +22,7 @@ export default function ButtonPage() {
   `;
 
   // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.atoms.component6.presentation.props;
 
   return (
     <div>

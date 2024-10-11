@@ -1,6 +1,6 @@
 import React from 'react';
 import Input from './Input';
-import '../../../assets/Input.css';
+import '../../../assets/InputStyle.css';
 
 const InputForm: React.FC = () => {
     const handleSubmit = (e: React.FormEvent) => {
@@ -12,9 +12,9 @@ const InputForm: React.FC = () => {
           <form onSubmit={handleSubmit}>
               <div className="input-group">
                   <Input 
-                      type="password"
-                      label="Password"
-                      placeholder="Enter your password"
+                      type="name"
+                      label="name"
+                      placeholder="Enter your name"
                       required={true}
                       minLength={8}
                       maxLength={20}

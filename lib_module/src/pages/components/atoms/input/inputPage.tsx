@@ -14,7 +14,7 @@ export default function InputPage() {
   }, []); // Le tableau de dépendances vide assure que cette fonction s'exécute seulement une fois après le premier rendu.
 
   const htmlSnippet = `
-    &lt;Input propsInput1="prop1" propsInput2="prop2" propsInput3="prop3"/>;
+    &lt;InputForm />;
   `;
 
   // Récupération des données depuis le fichier data

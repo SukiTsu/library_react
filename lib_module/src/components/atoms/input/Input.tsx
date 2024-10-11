@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../assets/Input.css';
+import '../../../assets/InputStyle.css';
 
 export interface InputProps {
   type: string;
@@ -10,7 +10,6 @@ export interface InputProps {
   maxLength?: number;
   disabled?: boolean;
   readOnly?: boolean;
-
 }
 
 const Input: React.FC<InputProps> = ({
@@ -24,7 +23,7 @@ const Input: React.FC<InputProps> = ({
   readOnly,
 }) => {
   return (
-    <div style={{ marginBottom: '15px' }}>
+    <div className="input-container">
       {label && (
         <label className="input-label">
           {label}
