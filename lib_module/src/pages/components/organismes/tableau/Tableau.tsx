@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../../assets/css/tableau.css";
+import "../../../../assets/css/tableau.css";
 import { DEFAULT_TABLE_CONFIG } from "./Tableau_data"; // Importation de la configuration par défaut
 
 interface TableProps {
