@@ -22,7 +22,7 @@ export default function BreadcrumbPage() {
   `;
 
   // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.molecules.component2.presentation.props;
 
   return (
     <div>

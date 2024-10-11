@@ -290,24 +290,24 @@ export const RESUME_DATA = {
       component2: {
         name: "Breadcrumb",
         description:
-          "Easily create inputs with different statuses and sizes using our components.",
+          "List of clickable links that redirect",
         presentation: {
           title: "Basic examples",
-          description: "description",
+          description: "Here's a quick example of an Breadcrumbs component to import into your project",
           props: {
             title: "How it works",
-            description: "Composant Breadcrumbs qui affiche une liste d'onglets.",
+            description: "A string of characters that will be listed for user navigation",
             props1: {
               title: "ListOnglet",
-              description: "Liste d'onglet qui seront listés",
+              description: "List of tabs to be listed",
             },
             props2: {
-              title: "propsInput2",
-              description: "description du props 2",
+              title: "ListeLien",
+              description: "List of links to which users will be redirected when they click on a nail",
             },
             props3: {
-              title: "propsInput3",
-              description: "description du props 3",
+              title: "BkColor",
+              description: "Tab background color",
             },
           },
         },
@@ -397,28 +397,28 @@ export const RESUME_DATA = {
       component3: {
         name: "Modal",
         description:
-          "Easily create inputs with different statuses and sizes using our components.",
+          "Modal component. When the button is clicked, a box is displayed with a given content.",
         presentation: {
           title: "Basic examples",
-          description: "description",
+          description: "Here's a quick example of an Modal component to import into your project :",
           props: {
             title: "How it works",
-            description: "Composant Modal. Lorsque le bouton est cliqué, un encadré est affiché avec un contenu qui lui est donné",
+            description: "",
             props1: {
               title: "Title",
-              description: "Texte qui sera affiché en tant que titre dans l'encadré",
+              description: "Text to be displayed as title in box",
             },
             props2: {
               title: "Content",
-              description: "Contenu qui sera dans l'encadré",
+              description: "Content that will be in the box",
             },
             props3: {
               title: "BkColor",
-              description: "Couleur de fond de l'encadré",
+              description: "Frame background color",
             },
             props4: {
               title: "Position",
-              description: "Position où sera afficher l'encadré",
+              description: "Position where box will be displayed",
             },
           },
         },
@@ -426,24 +426,24 @@ export const RESUME_DATA = {
       component4: {
         name: "Tabs",
         description:
-          "Easily create inputs with different statuses and sizes using our components.",
+          "Tabs component listing links that will display content when clicked",
         presentation: {
           title: "Basic examples",
-          description: "description",
+          description: "Here's a quick example of an Modal component to import into your project :",
           props: {
             title: "How it works",
-            description: "Composant Tabs listant les liens qui afficheront un contenu lorsqu'ils sont cliqués",
+            description: "A list of characters to be used as buttons to display content when clicked.",
             props1: {
               title: "Titles",
-              description: "Liste des titres",
+              description: "List of titles that will be buttons",
             },
             props2: {
               title: "ListContent",
-              description: "Liste de contenu qui seront affiché lorsqu'un des titres est cliqué",
+              description: "List of content that will be displayed when one of the titles is clicked",
             },
             props3: {
               title: "Color",
-              description: "Couleur de fond du tabs",
+              description: "Tab background color",
             },
           },
         },

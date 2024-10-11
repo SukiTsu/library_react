@@ -22,7 +22,7 @@ export default function ModalPage() {
   `;
 
   // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.organismes.component3.presentation.props;
 
   return (
     <div>

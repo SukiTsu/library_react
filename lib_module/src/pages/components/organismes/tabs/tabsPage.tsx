@@ -22,7 +22,7 @@ export default function TabsPage() {
   `;
 
   // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.organismes.component4.presentation.props;
 
   return (
     <div>
