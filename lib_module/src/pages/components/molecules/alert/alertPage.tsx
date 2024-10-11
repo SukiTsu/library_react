@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
-import "../../../../assets/css/pages/select.css";
+import "../../../../assets/css/example.css";
 import { RESUME_DATA } from "../../../../data/data";
 
 import Navbar from "../../../../components/presentation/Navbar";
 import Sidebar from "../../../../components/presentation/Sidebar";
 import Prism from "prismjs";
+
+import {type, message, autoClose, autoCloseTime} from './Alert_data';
+import Alert from './Alert';
 
 export default function AlertPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -40,7 +43,7 @@ export default function AlertPage() {
                   .description
               }
             </p>
-            <div className="example-component"></div>
+            <div className="example-component centrage"><Alert type={type} message={message} autoClose={autoClose} autoCloseTime={autoCloseTime} /></div>
             <pre>
               <code
                 className="language-html line-numbers"
