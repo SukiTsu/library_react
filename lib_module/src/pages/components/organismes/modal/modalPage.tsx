@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import "../../../../assets/css/pages/select.css";
 import { RESUME_DATA } from "../../../../data/data";
 
-import Navbar from "../../../../components/presentation/Navbar";
-import Sidebar from "../../../../components/presentation/Sidebar";
+
 import Prism from "prismjs";
 import Modal from "./Modal";
+import Navbar from "../../presentation/Navbar";
+import Sidebar from "../../presentation/Sidebar";
 
 export default function ModalPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -19,7 +20,7 @@ export default function ModalPage() {
   `;
 
   // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.organismes.component3.presentation.props;
 
   return (
     <div>

@@ -2,12 +2,13 @@ import React, { useEffect } from "react";
 import "../../../../assets/css/example.css";
 import { RESUME_DATA } from "../../../../data/data";
 
-import Navbar from "../../../../components/presentation/Navbar";
-import Sidebar from "../../../../components/presentation/Sidebar";
+
 import Prism from "prismjs";
 
 import {images, interval, showcontrols} from './Carousel_data';
 import Carousel from './Carousel';
+import Navbar from "../../presentation/Navbar";
+import Sidebar from "../../presentation/Sidebar";
 
 export default function CarouselPage() {
   //Hook useEffect pour exécuter une action après le montage du composant

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../assets/Loader.css';
+import '../../../../assets/Loader.css';
 
 export interface LoaderProps {
   type: 'spinner' | 'progress';

@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import "../../../../assets/css/pages/select.css";
 import { RESUME_DATA } from "../../../../data/data";
 
-import Navbar from "../../../../components/presentation/Navbar";
-import Sidebar from "../../../../components/presentation/Sidebar";
+
 import Prism from "prismjs";
-import Loader from "../../../../components/atoms/loaders/Loader";
+import Loader from "./Loader";
+import Navbar from "../../presentation/Navbar";
+import Sidebar from "../../presentation/Sidebar";
 
 export default function LoaderPage() {
   useEffect(() => {

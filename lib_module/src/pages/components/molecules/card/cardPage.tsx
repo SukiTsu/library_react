@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import "../../../../assets/css/pages/select.css";
 import { RESUME_DATA } from "../../../../data/data";
 
-import Navbar from "../../../../components/presentation/Navbar";
-import Sidebar from "../../../../components/presentation/Sidebar";
+
 import Prism from "prismjs";
+import Navbar from "../../presentation/Navbar";
+import Sidebar from "../../presentation/Sidebar";
 
 export default function CardPage() {
   //Hook useEffect pour exécuter une action après le montage du composant

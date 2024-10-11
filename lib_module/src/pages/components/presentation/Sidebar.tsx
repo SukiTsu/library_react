@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../assets/css/sidebar.css";
-import { RESUME_DATA } from "../../data/data";
+import "../../../assets/css/sidebar.css";
+import { RESUME_DATA } from "../../../data/data";
 
 //Définition du type Components
 type Components = Record<string, { name: string; path: string }>;

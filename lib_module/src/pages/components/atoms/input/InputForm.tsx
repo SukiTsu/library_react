@@ -1,6 +1,6 @@
 import React from 'react';
 import Input from './Input';
-import '../../../assets/InputStyle.css';
+import '../../../../assets/InputStyle.css';
 
 const InputForm: React.FC = () => {
     const handleSubmit = (e: React.FormEvent) => {

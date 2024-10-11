@@ -2,10 +2,12 @@ import React, { useEffect } from "react";
 import "../../../../assets/css/pages/select.css";
 import { RESUME_DATA } from "../../../../data/data";
 
-import Navbar from "../../../../components/presentation/Navbar";
-import Sidebar from "../../../../components/presentation/Sidebar";
+
 import Prism from "prismjs";
 import Tabs from "./Tabs";
+import Navbar from "../../presentation/Navbar";
+import Sidebar from "../../presentation/Sidebar";
+
 
 export default function TabsPage() {
   //Hook useEffect pour exécuter une action après le montage du composant
@@ -19,7 +21,7 @@ export default function TabsPage() {
   `;
 
   // Récupération des données depuis le fichier data
-  const props = RESUME_DATA.content.atoms.component1.presentation.props;
+  const props = RESUME_DATA.content.organismes.component4.presentation.props;
 
   return (
     <div>

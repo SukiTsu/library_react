@@ -1,0 +1,128 @@
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.card-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* **************************
+        Couleur Rouge
+****************************/
+.card.red {
+    background-color: red;
+}
+
+.card-title.red {
+    color: white;
+}
+
+.card-description.red {
+    color: white;
+}
+
+/* **************************
+        Couleur Bleue
+****************************/
+.card.blue {
+    background-color: blue;
+}
+
+.card-title.blue {
+    color: white;
+}
+
+.card-description.blue {
+    color: white;
+}
+
+/* **************************
+        Couleur Verte
+****************************/
+.card.green {
+    background-color: green;
+}
+
+.card-title.green {
+    color: black;
+}
+
+.card-description.green {
+    color: black;
+}
+
+/* ********************
+    Media Queries
+**********************/
+
+@media (max-width: 600px) {
+    .card {
+        max-width: 100%;
+        margin: 10px;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+    }
+    
+    .card-description {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .card {
+        max-width: 45%;
+        margin: 15px;
+    }
+    
+    .card-title {
+        font-size: 1.4rem;
+    }
+    
+    .card-description {
+        font-size: 1rem;
+        margin-bottom: 18px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .card {
+        max-width: 300px;
+        margin: 20px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .card-description {
+        font-size: 1rem;
+    }
+}

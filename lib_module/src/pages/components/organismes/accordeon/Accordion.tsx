@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../../assets/Accordion.css';
+import '../../../../assets/Accordion.css';
 
 export interface Section {
   title: string;
