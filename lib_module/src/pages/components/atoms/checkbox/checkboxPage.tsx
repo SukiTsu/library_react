@@ -15,7 +15,7 @@ export default function CheckboxPage() {
   }, []); // Le tableau de dépendances vide assure que cette fonction s'exécute seulement une fois après le premier rendu.
 
   const htmlSnippet = `
-    &lt;CheckBox titleBox="Titre" listChek={["Valeur 1", "Valeur 2"]} bkColor="red"/>
+    &lt;CheckBox titleBox="Titre" listChek=&#123;&#91;"Valeur 1", "Valeur 2"&#93;&#125; bkColor="red"/&gt;
   `;
 
   // Récupération des données depuis le fichier data

@@ -17,7 +17,7 @@ export default function TabsPage() {
   }, []); // Le tableau de dépendances vide assure que cette fonction s'exécute seulement une fois après le premier rendu.
 
   const htmlSnippet = `
-    &lt;Tabs titles={["Titre 1", "Titre 2"]} listContent={["Contenue du titre 1", "Contenu du titre 2"]} color="red"/>
+    &lt;Tabs titles=&#123;&#91;"Titre 1", "Titre 2"&#93;&#125; listContent=&#123;&#91;"Contenue du titre 1", "Contenu du titre 2"&#93;&#125; color="red"/&gt;
   `;
 
   // Récupération des données depuis le fichier data

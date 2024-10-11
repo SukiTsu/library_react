@@ -16,7 +16,7 @@ export default function ModalPage() {
   }, []); // Le tableau de dépendances vide assure que cette fonction s'exécute seulement une fois après le premier rendu.
 
   const htmlSnippet = `
-    &lt;Modal title="Mon Titre" content="Exemple de contenu" bkColor="red" position="centered"/>
+    &lt;Modal title="Mon Titre" content="Exemple de contenu" bkColor="red" position="centered"/&gt;
   `;
 
   // Récupération des données depuis le fichier data

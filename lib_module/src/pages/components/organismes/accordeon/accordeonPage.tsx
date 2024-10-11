@@ -43,7 +43,7 @@ export default function AccordeonPage() {
               }
             </p>
             <div className="example-component">
-            <Accordion allowMultipleOpen={false} customStyles={{ displayMode: 'column' }} />
+            <Accordion allowMultipleOpen={true} customStyles={{ displayMode: 'column' }} />
             </div>
             <pre>
               <code
